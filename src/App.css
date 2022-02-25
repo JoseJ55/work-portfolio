@@ -1,1 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 
+:root {
+  /* Header section  */
+  --font: 'podkova', sans-serif;
+  --transparent-main-color: rgba(92, 51, 138, 0.3);
+  --main-text-color: black;
+}
+
+body {
+  font-family: 'podkova', sans-serif;
+  background-color: red;
+}

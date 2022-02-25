@@ -1,0 +1,102 @@
+#portfolio_header-quicklink {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: 0;
+    z-index: 2;
+}
+
+#portfolio_header-quicklink_box {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(0, 0, 0, .5);
+    padding: .5vh 4vw;
+    margin: 1vh 0;
+    align-items: center;
+    background: var(--transparent-main-color);
+    cursor: pointer;
+}
+
+#portfolio_header-quicklink_box:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+#portfolio_header-quicklink_box h3 {
+    font-family: var(--font);
+    font-size: 1.5rem;
+    color: var(--main-text-color)
+}
+
+#portfolio_header-quicklink_box_down {
+    font-size: 1.5rem;
+    color: var(--main-text-color)
+}
+
+@media screen and (max-width: 3000px) {
+    #portfolio_header-quicklink_box h3 {
+        font-size: 2.5rem;
+    }
+
+    #portfolio_header-quicklink_box_down {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #portfolio_header-quicklink_box h3 {
+        font-size: 1.5rem;
+    }
+
+    #portfolio_header-quicklink_box_down {
+        font-size: 1rem;
+    }
+
+    #portfolio_header-quicklink_box {
+        padding: .5vh 6vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #portfolio_header-quicklink_box h3 {
+        font-size: 1.5rem;
+    }
+
+    #portfolio_header-quicklink_box_down {
+        font-size: 1rem;
+    }
+
+    #portfolio_header-quicklink_box {
+        padding: .5vh 9vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #portfolio_header-quicklink_box h3 {
+        font-size: 1.5rem;
+    }
+
+    #portfolio_header-quicklink_box_down {
+        font-size: 1.5rem;
+    }
+
+    #portfolio_header-quicklink_box {
+        width: 100%;
+        margin: 10px
+    }
+
+    #portfolio_header-quicklink_box:hover {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #portfolio_header-quicklink_box h3 {
+        font-size: 1rem;
+    }
+
+    #portfolio_header-quicklink_box_down {
+        font-size: 1rem;
+    }
+}
