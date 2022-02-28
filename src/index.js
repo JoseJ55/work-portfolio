@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 import { ThemeProvider } from "./themeContext";
+import { ProjectsProvider } from "./projectsContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-      <App />
+      <ProjectsProvider>
+        <App />
+      </ProjectsProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

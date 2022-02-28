@@ -1,0 +1,31 @@
+#portfolio_about {
+    width: 100%;
+    background-color: var(--secondary-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+#portfolio_about p {
+    word-wrap: normal;
+    width: 80%;
+    margin: 5vh 10vw;
+    font-family: var(--font);
+    font-size: 1.1rem;
+    z-index: 1;
+}
+
+#portfolio_about_shape {
+    position: absolute;
+    width: 0;
+    height: 0;
+    /* background-color: red; */
+    z-index: 0;
+    /* border-top: 50px solid transparent;
+    border-left: inherit solid transparent;
+    border-bottom: inherit solid red;
+    border-right: 50px solid transparent; */
+}

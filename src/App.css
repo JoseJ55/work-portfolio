@@ -8,9 +8,15 @@
   --font: 'podkova', sans-serif;
   --transparent-main-color: rgba(92, 51, 138, 0.3);
   --main-text-color: black;
+
+  /* Skills section */
+  --main-background-color: rgba(92, 51, 138, 1);
+
+  /* About scetion */
+  --secondary-background-color: rgb(161, 89, 243);
 }
 
 body {
   font-family: 'podkova', sans-serif;
-  background-color: red;
+  /* background-color: red; */
 }

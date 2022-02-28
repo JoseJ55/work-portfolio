@@ -1,0 +1,210 @@
+#portfolio_contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-background-color);
+    padding: 5vh 0;
+    z-index: 100;
+}
+
+#contact {
+    width: 20%;
+    padding: 2vh 0;
+}
+
+#contactTitle {
+    margin: 0  0 2vh 0;
+    font-family: var(--font);
+}
+
+.contactItem{
+    padding: 1vh 0;
+    font-family: var(--font);
+}
+
+.contactItem a {
+    text-decoration: none;
+    color: var(--secondary-background-color)
+}
+
+.contactItem a:hover {
+    color: white;
+}
+
+#contactIcons {
+    display: flex;
+    padding: 1vh 0;
+    /* color: var(--secondary-background-color); */
+}
+
+.icon {
+    /* color: var(--secondary-background-color); */
+    color: white;
+    font-size: 2rem;
+}
+
+#email {
+    width: 40%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.emailItem{
+    width: 100%;
+    padding: 1vh 3%;
+    background-color: white;
+    border: none;
+    border-bottom: 1px var(--secondary-background-color) solid;
+    border-radius: 10px;
+    font-family: var(--font);
+    font-size: 110%;
+    margin: 1vh 0;
+    outline: var(--secondary-background-color);
+}
+
+.emailItem:hover{
+    border: 1px var(--secondary-background-color) solid;
+    padding: .93vh 2.8%;
+}
+
+.emailItem:focus {
+    border: 1px var(--secondary-background-color) solid;
+    padding: .93vh 2.8%;
+}
+
+#emailName {
+    width: 100%;
+}
+
+#emailEmail {
+    width: 43%;
+    margin: 0 2% 0 0;
+}
+
+#emailPhone {
+    width: 43%;
+}
+
+#emailSub {
+    width: 100%;
+}
+
+#emailMessage {
+    font-family: inherit;
+    resize: none;
+}
+
+#emailMessage::-webkit-scrollbar {
+    width: 10px;
+    background-color: #444;
+}
+
+#emailMessage::-webkit-scrollbar-thumb {
+    background-color: #888;
+    outline: 1px solid #666;
+    border-radius: 10px;
+}
+
+#emailBtn {
+    width: 100%;
+    padding: 1vh 0;
+    background-color: transparent;
+    border: 1px var(--secondary-background-color) solid;
+    border-radius: 10px;
+    font-size: 110%;
+}
+
+#emailBtn:hover {
+    background-color: var(--secondary-background-color);
+    border: 1px var(--main-background-color) solid;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+@media only screen and (max-width: 1100px){
+    #footer {
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+
+    #contact {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #email {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .emailItem {
+        width: 100%;
+        margin: 0;
+    }
+
+    #emailEmail {
+        width: 100%;
+        margin: 0;
+        padding: 1vh 3%;
+    }
+
+    #emailPhone {
+        width: 100%;
+        margin: 0;
+        padding: 1vh 3%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    #footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #contact {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #email {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .emailItem {
+        width: 100%;
+        margin: 0;
+    }
+
+    #emailEmail {
+        width: 100%;
+        margin: 0;
+        padding: 1vh 3%;
+    }
+
+    #emailPhone {
+        width: 100%;
+        margin: 0;
+        padding: 1vh 3%;
+    }
+}

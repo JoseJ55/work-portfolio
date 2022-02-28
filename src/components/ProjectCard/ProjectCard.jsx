@@ -1,0 +1,57 @@
+import React from 'react';
+import "./ProjectCard.css";
+
+function ProjectCard({ project, offset }) {
+    let style;
+    switch (project.small) {
+        case "one":
+            style = {
+                transform: `translateY(${offset * .2}px)`,
+                transition: "linear"
+            }
+            break;
+        case "two":
+            style = {
+                transform: `translateY(${offset * 0.3}px)`,
+                transition: "linear"
+            }
+            break;
+        case "three":
+            style = {
+                transform: `translateY(${offset * 0.7}px)`,
+                transition: "linear"
+            }
+            break;
+        case "four":
+            style = {
+                transform: `translateY(${offset * 0.35}px)`,
+                transition: "linear"
+            }
+            break;
+        case "five":
+            style = {
+                transform: `translateY(${offset * 0.5}px)`,
+                transition: "linear"
+            }
+            break;
+    }
+
+    return (
+        <div 
+            className="portfolio_projects-project" 
+            id={`${project.small}`} 
+            style={style}
+        >
+            <input 
+                type="button" 
+                className="portfolio_projects-project_image"
+                // onClick={() => setPopUp(true)}
+                style={{
+                    backgroundImage: `url(${project.images[0]})`
+                }}
+            />
+        </div>
+    )
+}
+
+export default ProjectCard
