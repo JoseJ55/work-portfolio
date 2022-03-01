@@ -1,7 +1,6 @@
 .portfolio_projects-project {
     width: 25%;
     height: 30vh;
-    /* padding: 3vh 0 */
 }
 
 .portfolio_projects-project_image {
@@ -14,6 +13,7 @@
 .portfolio_projects-project_image:hover {
     cursor: pointer;
     z-index: 1000 !important;
+    opacity: .9;
 }
 
 #one {
@@ -57,4 +57,120 @@
     width: 35%;
     height: 40vh;
     z-index: 3;
+}
+
+@media screen and (max-width: 1500px) {
+    #one {
+        width: 40%;
+    }
+
+    #two {
+        width: 40%;
+        height: 35vh;
+    }
+
+    #three {
+        width: 30%;
+        height: 25vh;
+    }
+
+    #four {
+        width: 55%;
+        height: 40vh;
+    }
+
+    #five {
+        width: 40%;
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #one {
+        width: 45%;
+        height: 30vh;
+        right: 45%;
+    }
+
+    #two {
+        height: 30vh;
+    }
+
+    #three {
+        width: 40%;
+    }
+
+    #four {
+        height: 35vh;
+        right: 10%;
+    }
+
+    #five {
+        height: 25vh;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #one {
+        width: 60%;
+        height: 25vh;
+        right: 35%
+    }
+
+    #two {
+        width: 55%;
+        height: 25vh;
+    }
+
+    #three {
+        width: 50%;
+        height: 20vh;
+    }
+
+    #four {
+        width: 70%;
+        height: 30vh;
+        right: 5%;
+        bottom: 50%;
+    }
+
+    #five {
+        width: 45%;
+        height: 20vh;
+        left: 5%;
+        bottom: 60%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #one {
+        width: 70%;
+        height: 20vh;
+        right: 25%;
+        top: -5%;
+    }
+
+    #two {
+        width: 65%;
+        height: 20vh;
+        left: 5%;
+        top: 15%;
+    }
+
+    #three {
+        width: 70%;
+        height: 15vh;
+    }
+
+    #four {
+        width: 90%;
+        height: 20vh;
+        bottom: 60%;
+    }
+
+    #five {
+        width: 65%;
+        height: 15vh;
+    }
 }

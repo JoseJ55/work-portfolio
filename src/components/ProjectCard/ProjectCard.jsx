@@ -1,7 +1,8 @@
 import React from 'react';
 import "./ProjectCard.css";
 
-function ProjectCard({ project, offset }) {
+
+function ProjectCard({ project, offset, info, set, popup, setPopup }) {
     let style;
     switch (project.small) {
         case "one":
@@ -34,6 +35,12 @@ function ProjectCard({ project, offset }) {
                 transition: "linear"
             }
             break;
+        default:
+            style = {
+                transform: `translateY(${offset * 0.5}px)`,
+                transition: "linear"
+            }
+            break;
     }
 
     return (
@@ -45,7 +52,10 @@ function ProjectCard({ project, offset }) {
             <input 
                 type="button" 
                 className="portfolio_projects-project_image"
-                // onClick={() => setPopUp(true)}
+                onClick={() => {
+                    setPopup(!popup)
+                    set(project)
+                }}
                 style={{
                     backgroundImage: `url(${project.images[0]})`
                 }}
