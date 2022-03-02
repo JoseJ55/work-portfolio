@@ -1,6 +1,12 @@
 import React from 'react';
 import "./ProjectInfo.css";
 
+import { IoIosArrowBack } from "react-icons/io";
+// import { AiFillGithub } from "react-icons/ai";
+// import { MdWeb } from "react-icons/md";
+
+import ProjectInfoImages from '../ProjectInfoImages/ProjectInfoImages';
+
 function ProjectInfo({ setPopup, info}) {
     console.log(info)
 
@@ -10,21 +16,46 @@ function ProjectInfo({ setPopup, info}) {
         <div id="ProjectInfo-section">
             <div id="ProjectInfo-section-head">
                 <button onClick={() => setPopup(false)}>
-                    back
+                    <IoIosArrowBack id="ProjectInfo-section-head-icon" />
                 </button>
             </div>
+
             <h1>{info.title}</h1>
-            <ul>
-                {info.links.map((link) => (
-                    <p><a href={link}>{link}</a></p>
-                ))}
-            </ul>
-            <p>{info.description}</p>
-            <ul>
-                {info.tools.map((tool) => (
-                    <p>{tool}</p>
-                ))}
-            </ul>
+
+            {/* <div id="ProjectInfo-section-links">
+                {info.links.github ? 
+                    <a 
+                        href={info.links.github}
+                        target="_blank"
+                        rel='noopener noreferrer'
+                    >
+                        <AiFillGithub className='ProjectInfo-section-links-icons'/>
+                    </a> 
+                : <></>}
+                {info.links.live ? 
+                    <a 
+                        href={info.links.live}
+                        target="_blank"
+                        rel='noopener noreferrer'
+                    >
+                        <MdWeb className='ProjectInfo-section-links-icons'/>
+                    </a> 
+                : <></>}
+            </div>  */}
+
+            <div id="ProjectInfo-section-desc">
+                <p>{info.description}</p>
+            </div>
+
+            <div id="ProjectInfo-section-tools">
+                <ul>
+                    {info.tools.map((tool) => (
+                        <li>{tool}</li>
+                    ))}
+                </ul>
+            </div>
+
+            <ProjectInfoImages images={info.images} />
         </div>
     </div>
   )
