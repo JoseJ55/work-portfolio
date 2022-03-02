@@ -12,13 +12,11 @@ function Contact(){
     // const [noticeText, setNoticeText] = useState("");
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
     const [subject, setSubject] = useState("");
     const [text, setText] = useState("");
     const [inputError, setInputError] = useState({
         name: {},
         email: {},
-        phone: {},
         subject: {},
         text: {}
     })
@@ -27,7 +25,6 @@ function Contact(){
     //     let mail = {
     //         from_name: name,
     //         from_email: email,
-    //         from_phone: phone,
     //         subject: subject,
     //         message: text
     //     }
@@ -51,15 +48,12 @@ function Contact(){
 
     // Need to finish added error secitons for empty or wrong inputs.
     const verify = () => {
-        if (name === "" || email === "" || phone === "" || subject === "" || text === ""){
+        if (name === "" || email === "" || subject === "" || text === ""){
             if(name === ""){
                 setInputError({...inputError, name:{borderColor: "red"}})
             }
             if(email === ""){
                 setInputError({...inputError, email:{borderColor: "red"}})
-            }
-            if(phone === ""){
-                setInputError({...inputError, phone:{borderColor: "red"}})
             }
             if(subject === ""){
                 setInputError({...inputError, subject:{borderColor: "red"}})
@@ -83,30 +77,24 @@ function Contact(){
             </div>
 
             <div id="email">
-                <input 
-                    id="emailName" 
-                    className="emailItem" 
-                    type="text" 
-                    placeholder="Name" 
-                    style={inputError.name}
-                    onChange={(e) => setName(e.target.value)}
-                />
-                <input 
-                    id="emailEmail" 
-                    className="emailItem" 
-                    type="text" 
-                    placeholder="Email" 
-                    style={inputError.email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <input 
-                    id="emailPhone" 
-                    className="emailItem" 
-                    type="text" 
-                    placeholder="Phone" 
-                    style={inputError.phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                />
+                <div id="email-top">
+                    <input 
+                        id="emailName" 
+                        className="emailItem" 
+                        type="text" 
+                        placeholder="Name" 
+                        style={inputError.name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                    <input 
+                        id="emailEmail" 
+                        className="emailItem" 
+                        type="text" 
+                        placeholder="Email" 
+                        style={inputError.email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
                 <input 
                     id="emailSub" 
                     className="emailItem" 
@@ -133,7 +121,6 @@ function Contact(){
                     onClick={() => {
                         console.log(name)
                         console.log(email)
-                        console.log(phone)
                         console.log(subject)
                         console.log(text)
                     }}

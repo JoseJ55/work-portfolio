@@ -1,10 +1,11 @@
 #portfolio_contact {
+    position: absolute;
+    z-index:100;
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: var(--main-background-color);
     padding: 5vh 0;
-    z-index: 100;
 }
 
 #contact {
@@ -51,6 +52,13 @@
     justify-content: center;
 }
 
+#email-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .emailItem{
     width: 100%;
     padding: 1vh 3%;
@@ -75,15 +83,10 @@
 }
 
 #emailName {
-    width: 100%;
+    width: 43%;
 }
 
 #emailEmail {
-    width: 43%;
-    margin: 0 2% 0 0;
-}
-
-#emailPhone {
     width: 43%;
 }
 
@@ -123,10 +126,75 @@
     transition-duration: .5s;
 }
 
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1000px){
+    #contact {
+        width: 30%;
+    }
+
+    #email {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #contact {
+        width: 35%;
+    }
+     #email {
+        width: 55%;
+     }
+}
+
+@media screen and (max-width: 550px) {
+    #portfolio_contact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact {
+        width: 60%;
+    }
+
+    #email {
+        width: 75%;
+    }
+
+    #email-top{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #emailName {
+        width: 95%;
+    }
+
+    #emailEmail {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .emailItem{
+        font-size: 90%;
+    }
+
+    #contact {
+        width: 90%;
+    }
+
+    #email {
+        width: 90%;
+    }
+
+    #emailBtn {
+        font-size: 95%;
+    }
+}
+/* @media only screen and (max-width: 1000px){
     #footer {
         flex-direction: column;
-        /* justify-content: center; */
     }
 
     #contact {
@@ -158,15 +226,9 @@
         margin: 0;
         padding: 1vh 3%;
     }
+} */
 
-    #emailPhone {
-        width: 100%;
-        margin: 0;
-        padding: 1vh 3%;
-    }
-}
-
-@media only screen and (max-width: 500px){
+/* @media only screen and (max-width: 500px){
     #footer {
         flex-direction: column;
         justify-content: center;
@@ -201,10 +263,4 @@
         margin: 0;
         padding: 1vh 3%;
     }
-
-    #emailPhone {
-        width: 100%;
-        margin: 0;
-        padding: 1vh 3%;
-    }
-}
+} */

@@ -16,7 +16,7 @@ function Home({ offset }) {
         <Header />
         <Projects offset={offset} info={projectDetail} set={setPorjectDetail} popup={popup} setPopup={setPopup} />
         <Skills />
-        <About offset={offset}/>
+        <About />
         <Contact />
         {popup ? <ProjectInfo setPopup={setPopup} info={projectDetail} /> : <></>}
     </div>

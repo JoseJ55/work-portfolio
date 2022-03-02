@@ -12,7 +12,6 @@
 
 .portfolio_projects-project_image:hover {
     cursor: pointer;
-    z-index: 1000 !important;
     opacity: .9;
 }
 
