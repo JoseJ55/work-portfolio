@@ -1,5 +1,5 @@
 #slide-container {
-    width: 90%;
+    width: 80%;
     padding: 2vh 0;
 }
 
@@ -8,5 +8,39 @@
     align-items: center;
     justify-content: center;
     background-size: cover;
-    height: 420px;
+    height: 400px;
+}
+
+@media screen and (min-width: 2000px) {
+    #slide-container {
+        width: 60%;
+    }
+
+    .each-slide > div {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .each-slide > div {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .each-slide > div {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .each-slide > div {
+        height: 175px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .each-slide > div {
+        height: 125px;
+    }
 }

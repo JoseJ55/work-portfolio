@@ -2,8 +2,8 @@ import React from 'react';
 import "./ProjectInfo.css";
 
 import { IoIosArrowBack } from "react-icons/io";
-// import { AiFillGithub } from "react-icons/ai";
-// import { MdWeb } from "react-icons/md";
+import { AiFillGithub } from "react-icons/ai";
+import { MdWeb } from "react-icons/md";
 
 import ProjectInfoImages from '../ProjectInfoImages/ProjectInfoImages';
 
@@ -18,18 +18,15 @@ function ProjectInfo({ setPopup, info}) {
                 <button onClick={() => setPopup(false)}>
                     <IoIosArrowBack id="ProjectInfo-section-head-icon" />
                 </button>
-            </div>
 
-            <h1>{info.title}</h1>
-
-            {/* <div id="ProjectInfo-section-links">
+                <div id="ProjectInfo-section-head-links">
                 {info.links.github ? 
                     <a 
                         href={info.links.github}
                         target="_blank"
                         rel='noopener noreferrer'
                     >
-                        <AiFillGithub className='ProjectInfo-section-links-icons'/>
+                        <AiFillGithub className='ProjectInfo-section-head-links-icons'/>
                     </a> 
                 : <></>}
                 {info.links.live ? 
@@ -38,10 +35,13 @@ function ProjectInfo({ setPopup, info}) {
                         target="_blank"
                         rel='noopener noreferrer'
                     >
-                        <MdWeb className='ProjectInfo-section-links-icons'/>
+                        <MdWeb className='ProjectInfo-section-head-links-icons'/>
                     </a> 
                 : <></>}
-            </div>  */}
+            </div> 
+            </div>
+
+            <h1>{info.title}</h1>
 
             <div id="ProjectInfo-section-desc">
                 <p>{info.description}</p>
