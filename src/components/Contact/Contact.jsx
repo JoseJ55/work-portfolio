@@ -3,13 +3,13 @@ import "./Contact.css";
 // import emailjs from "emailjs-com";
 
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-// import Notice from "./../Notice/Notice";
+import Notice from "./../Notice/Notice";
 
 // require('dotenv').config();
 
 function Contact(){
-    // const [notice, setNotice] = useState(false);
-    // const [noticeText, setNoticeText] = useState("");
+    const [notice, setNotice] = useState(false);
+    const [noticeText, setNoticeText] = useState("");
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
@@ -21,48 +21,50 @@ function Contact(){
         text: {}
     })
 
-    // const sendData = () => {
-    //     let mail = {
-    //         from_name: name,
-    //         from_email: email,
-    //         subject: subject,
-    //         message: text
-    //     }
+    const sendData = () => {
+        setNotice(true);
+        setNoticeText("test");
+        // let mail = {
+        //     from_name: name,
+        //     from_email: email,
+        //     subject: subject,
+        //     message: text
+        // }
 
-    //     emailjs.send(
-    //         "service_34856gt", 
-    //         "template_6oej2fw", 
-    //         mail, 
-    //         "user_XiAqAO8SE5exdjP8TwO0u"
-    //     )
-    //     .then((result) => {
-    //         // console.log(result)
-    //         setNotice(true);
-    //         setNoticeText("success")
-    //     }).catch((err) => {
-    //         // console.log(err.text)
-    //         setNotice(true);
-    //         setNoticeText("error");
-    //     })
-    // }
+        // emailjs.send(
+        //     process.env.SERVICE_ID, 
+        //     process.env.TEMPLATE_ID, 
+        //     mail, 
+        //     process.env.USER_ID
+        // )
+        // .then((result) => {
+        //     // console.log(result)
+        //     setNotice(true);
+        //     setNoticeText("success")
+        // }).catch((err) => {
+        //     // console.log(err.text)
+        //     setNotice(true);
+        //     setNoticeText("error");
+        // })
+    }
 
     // Need to finish added error secitons for empty or wrong inputs.
-    const verify = () => {
-        if (name === "" || email === "" || subject === "" || text === ""){
-            if(name === ""){
-                setInputError({...inputError, name:{borderColor: "red"}})
-            }
-            if(email === ""){
-                setInputError({...inputError, email:{borderColor: "red"}})
-            }
-            if(subject === ""){
-                setInputError({...inputError, subject:{borderColor: "red"}})
-            }
-            if(text === ""){
-                setInputError({...inputError, text:{borderColor: "red"}})
-            }
-        }
-    }
+    // const verify = () => {
+    //     if (name === "" || email === "" || subject === "" || text === ""){
+    //         if(name === ""){
+    //             setInputError({...inputError, name:{borderColor: "red"}})
+    //         }
+    //         if(email === ""){
+    //             setInputError({...inputError, email:{borderColor: "red"}})
+    //         }
+    //         if(subject === ""){
+    //             setInputError({...inputError, subject:{borderColor: "red"}})
+    //         }
+    //         if(text === ""){
+    //             setInputError({...inputError, text:{borderColor: "red"}})
+    //         }
+    //     }
+    // }
 
     return (
         <div id="portfolio_contact">
@@ -117,16 +119,16 @@ function Contact(){
                     id="emailBtn" 
                     type="button" 
                     value="Submit" 
-                    // onClick={() => sendData()}
-                    onClick={() => {
-                        console.log(name)
-                        console.log(email)
-                        console.log(subject)
-                        console.log(text)
-                    }}
+                    onClick={() => sendData()}
+                    // onClick={() => {
+                    //     console.log(name)
+                    //     console.log(email)
+                    //     console.log(subject)
+                    //     console.log(text)
+                    // }}
                 />
             </div>
-            {/* {notice ? <Notice notice={notice} setNotice={setNotice} noticeText={noticeText}/> : <div></div>} */}
+            {notice ? <Notice notice={notice} setNotice={setNotice} noticeText={noticeText}/> : <div></div>}
         </div>
     )
 }
