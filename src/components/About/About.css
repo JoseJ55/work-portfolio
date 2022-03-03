@@ -1,31 +1,90 @@
 #portfolio_about {
     width: 100%;
-    background-color: var(--secondary-background-color);
+    background-image: linear-gradient(var(--secondary-background-color), white, var(--secondary-background-color));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 100;
+    padding: 5vh 0;
+}
+
+#portfolio_about h1 {
+    width: 70%;
+    font-family: var(--font);
+    font-size: 1.5rem;
+    margin: 1.5vh 0;
 }
 
 #portfolio_about p {
     word-wrap: normal;
-    width: 80%;
-    margin: 5vh 10vw;
+    width: 65%;
     font-family: var(--font);
     font-size: 1.1rem;
     z-index: 1;
+    margin: 1vh 0;
+    line-height: 1.5rem;
 }
 
 #portfolio_about_shape {
     position: absolute;
     width: 0;
     height: 0;
-    /* background-color: red; */
     z-index: 0;
-    /* border-top: 50px solid transparent;
-    border-left: inherit solid transparent;
-    border-bottom: inherit solid red;
-    border-right: 50px solid transparent; */
+}
+
+@media screen and (min-width: 2000px) {
+    #portfolio_about h1 {
+        font-size: 1.7rem;
+    }
+
+    #portfolio_about p {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #portfolio_about h1 {
+        width: 75%;
+    }
+
+    #portfolio_about p {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #portfolio_about h1 {
+        font-size: 1.4rem;
+    }
+
+    #portfolio_about p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #portfolio_about h1 {
+        font-size: 1.3rem;
+        width: 80%;
+    }
+
+    #portfolio_about p {
+        font-size: .9rem;
+        line-height: 1.3rem;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #portfolio_about h1 {
+        font-size: 1.1rem;
+        width: 90%;
+    }
+
+    #portfolio_about p {
+        font-size: .8rem;
+        width: 85%;
+    }
 }
