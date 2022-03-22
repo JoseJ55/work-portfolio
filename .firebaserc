@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "josejimenezportfolio"
-  }
+    "default": "josejimenezportfolio",
+    "josejimenezportfolio": "josejimenezportfolio"
+  },
+  "targets": {}
 }

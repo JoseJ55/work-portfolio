@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
-// import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";
 
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Notice from "./../Notice/Notice";
@@ -18,53 +18,81 @@ function Contact(){
         name: {},
         email: {},
         subject: {},
-        text: {}
+        text: {},
+        error: true
     })
 
     const sendData = () => {
-        setNotice(true);
-        setNoticeText("test");
-        // let mail = {
-        //     from_name: name,
-        //     from_email: email,
-        //     subject: subject,
-        //     message: text
-        // }
+        // setNotice(true);
+        // setNoticeText("test");
 
-        // emailjs.send(
-        //     process.env.SERVICE_ID, 
-        //     process.env.TEMPLATE_ID, 
-        //     mail, 
-        //     process.env.USER_ID
-        // )
-        // .then((result) => {
-        //     // console.log(result)
-        //     setNotice(true);
-        //     setNoticeText("success")
-        // }).catch((err) => {
-        //     // console.log(err.text)
-        //     setNotice(true);
-        //     setNoticeText("error");
-        // })
+        verify();
+        
+        let mail = {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: text
+        }
+
+        if(!inputError.error){
+            emailjs.send(
+                // process.env.SERVICE_ID, 
+                "service_34856gt",
+                // process.env.TEMPLATE_ID,
+                "template_6oej2fw",
+                mail, 
+                // process.env.USER_ID
+                "user_XiAqAO8SE5exdjP8TwO0u"
+            )
+            .then((result) => {
+                // console.log(result)
+                setName("");
+                setEmail("");
+                setSubject("");
+                setText("");
+    
+                setNotice(true);
+                setNoticeText("success")
+            }).catch((err) => {
+                // console.log(err)
+                setNotice(true);
+                setNoticeText("error");
+            })
+        } else {
+            setNotice(true);
+            setNoticeText("contact error");
+        }
     }
 
     // Need to finish added error secitons for empty or wrong inputs.
-    // const verify = () => {
-    //     if (name === "" || email === "" || subject === "" || text === ""){
-    //         if(name === ""){
-    //             setInputError({...inputError, name:{borderColor: "red"}})
-    //         }
-    //         if(email === ""){
-    //             setInputError({...inputError, email:{borderColor: "red"}})
-    //         }
-    //         if(subject === ""){
-    //             setInputError({...inputError, subject:{borderColor: "red"}})
-    //         }
-    //         if(text === ""){
-    //             setInputError({...inputError, text:{borderColor: "red"}})
-    //         }
-    //     }
-    // }
+    const verify = () => {
+        let temp = {
+            name: {},
+            email: {},
+            subject: {},
+            text: {},
+            error: true
+        }
+
+        if(name.length === 0){
+            temp.name = {border: "2px red solid"};
+        }
+        if(email.length === 0){
+            temp.email = {border: "2px red solid"};
+        }
+        if(subject.length === 0){
+            temp.subject = {border: "2px red solid"};
+        }
+        if(text.length === 0){
+            temp.text = {border: "2px red solid"};
+        }
+        if(name !== "" && email !== "" && subject !== "" && text !== ""){
+            temp.error = false;
+        }
+
+        setInputError(temp);
+    }
 
     return (
         <div id="portfolio_contact">
@@ -86,6 +114,7 @@ function Contact(){
                         type="text" 
                         placeholder="Name" 
                         style={inputError.name}
+                        value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
                     <input 
@@ -94,6 +123,7 @@ function Contact(){
                         type="text" 
                         placeholder="Email" 
                         style={inputError.email}
+                        value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
@@ -103,6 +133,7 @@ function Contact(){
                     type="text" 
                     placeholder="Subject" 
                     style={inputError.subject}
+                    value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                 />
                 <textarea 
@@ -112,6 +143,7 @@ function Contact(){
                     placeholder="Type you message here..." 
                     rows="7" 
                     style={inputError.text}
+                    value={text}
                     onChange={(e) => setText(e.target.value)}
                 />
                 

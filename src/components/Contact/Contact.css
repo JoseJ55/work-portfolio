@@ -63,7 +63,8 @@
     width: 100%;
     padding: 1vh 3%;
     background-color: white;
-    border: none;
+    /* border: none; */
+    border: 1px transparent solid;
     border-bottom: 1px var(--secondary-background-color) solid;
     border-radius: 10px;
     font-family: var(--font);
@@ -74,7 +75,7 @@
 
 .emailItem:hover{
     border: 1px var(--secondary-background-color) solid;
-    padding: .93vh 2.8%;
+    /* padding: .93vh 2.8%; */
 }
 
 .emailItem:focus {
