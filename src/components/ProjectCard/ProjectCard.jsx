@@ -35,6 +35,12 @@ function ProjectCard({ project, offset, info, set, popup, setPopup }) {
                 transition: "linear"
             }
             break;
+        case "six":
+            style = {
+                transform: `translateY(${offset * .25}px)`,
+                transition: "linear"
+            }
+            break;
         default:
             style = {
                 transform: `translateY(${offset * 0.5}px)`,

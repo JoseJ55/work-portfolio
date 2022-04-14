@@ -68,6 +68,19 @@ export function ProjectsProvider({ children }) {
             tools: ["HTML", "CSS", "Javascript", "React.js", "React Hooks"],
             exampleImage: "uiProject.png",
             images: ["/images/uiProject/uiProject.png", "/images/uiProject/uiProject2.png", "/images/uiProject/uiProject3.png", "/images/uiProject/uiProject4.png"],
+        },
+        {
+            id: 6,
+            title: "Solar System Showcase",
+            small: "six",
+            links: {
+                github: "https://github.com/JoseJ55/solar-showcase",
+                live: "https://solarsystem-9ca07.web.app/"
+            },
+            description: "A small website showing all the planets in the our solar system and other entites that are within our system. Using react to make component and diffrent pages with react hooks. The home page show what the website is and why it was made for, while all the other pages give information on the planet a user has click on for example earth. Each page gives a small fact and a small summary of the planet or information on the planet. The information is currently mainly form https://en.wikipedia.org/wiki/Main_Page. There is a small bit of information from https://www.nasa.gov/ and news articles from the google news api.",
+            tools: ["HTML", "CSS", "Javascript", "React.js", "React", "Axios", "Google News API"],
+            exampleImage: "solarShowcaseMain.png",
+            images: ["/images/solarShowcase/solarShowcaseMain.png", "/images/solarShowcase/solarShowcaseNav.png", "/images/solarShowcase/solarShowcaseFact.png", "/images/solarShowcase/solarShowcaseAbout.png"]
         }
     ])
 
