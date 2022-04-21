@@ -1,8 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import "./Projects.css";
 
 import ProjectCard from '../ProjectCard/ProjectCard';
-import ProjectInfo from '../ProjectInfo/ProjectInfo';
 import { ProjectsContext } from "../../projectsContext";
 
 function Projects({ offset, info, set, popup, setPopup }) {

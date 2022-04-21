@@ -55,7 +55,7 @@ export function ProjectsProvider({ children }) {
             description: "An online bar where you can find any kind of drink from the popular to the most unique. With our simple layout anyone can look up different drinks and get all the details for that drink. A user can search for a specific name of a drink or they can look for ingredients that are in drinks. Whatever the user searchs they will get a drink and find something they would like to try out. Once searched the user will be given information on the drink like ingredients and amounts, and how to make the drink so if someone wants to make it at home they are able to. The webpage uses a lot of api calls to get the data, but all of them are from the same database which allow for consist information and ease of use.",
             tools: ["HTML", "CSS", "Javascript", "React.js", "React Hooks", "cocktaildb API"],
             exampleImage: "onlineBarMain.png",
-            images: ["/images/onlineBar/onlinebarMain.png", "/images/onlineBar/onlineBar.png", "/images/onlineBar/onlineBarIngSearch.png", "/images/onlineBar/onlineBarDrinkSearch.png"],
+            images: ["/images/onlineBar/onlineBarMain.png", "/images/onlineBar/onlineBar.png", "/images/onlineBar/onlineBarIngSearch.png", "/images/onlineBar/onlineBarDrinkSearch.png"],
         },
         {
             id: 5,
