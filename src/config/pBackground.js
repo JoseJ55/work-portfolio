@@ -4,7 +4,7 @@ const pBackground = {
         enable: false,
         zIndex: 0
     },
-    fpsLimit: 60,
+    fpsLimit: 24,
     // detectRetina: true,
     particles: {
         links: {
@@ -38,8 +38,8 @@ const pBackground = {
                 area: 1000,
                 factor: 1000,
             },
-            limit: 400,
-            value: 250,
+            limit: 300,
+            value: 200,
         },
         shape: {
             options: {},
