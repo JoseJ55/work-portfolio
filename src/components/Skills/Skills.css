@@ -22,6 +22,36 @@
     width: fit-content;
 }
 
+.portfolio_skills-area_icon {
+    position: relative;
+    z-index: 20;
+}
+
+.portfolio_skills-area_icon .portfolio_skills-area_icon-tool_tip {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -60px;
+    /* border-width: 5px; */
+    /* border-style: solid; */
+    /* border-color: blue transparent transparent transparent; */
+
+    position: absolute;
+    z-index: 100;
+}
+
+.portfolio_skills-area_icon:hover .portfolio_skills-area_icon-tool_tip {
+    visibility: visible;
+}
+
 .icon-size {
     font-size: 2.5rem;
     border-radius: 10px;
@@ -37,24 +67,6 @@
 /* #html:hover {
     transform: scale(1.5);
     transition: all 1s ease-in-out;
-} */
-
-#html-text {
-    display: none;
-    background-color: blue;
-}
-
-/* #html-text::after{
-    content: "";
-    position: absolute;
-    bottom: -100px;
-    width: 10%;
-    height: 10%;
-    left: 50%;
-}
-
-#html:hover #html-text {
-    display: block;
 } */
 
 #css {

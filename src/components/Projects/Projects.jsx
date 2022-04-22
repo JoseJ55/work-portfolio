@@ -9,8 +9,8 @@ function Projects({ offset, info, set, popup, setPopup }) {
 
     return (
         <div id="portfolio_projects">
-            {projects.map((project) => (
-                <ProjectCard project={project} offset={offset} info={info} set={set} popup={popup} setPopup={setPopup}/>
+            {projects.map((project, key) => (
+                <ProjectCard project={project} offset={offset} info={info} set={set} popup={popup} setPopup={setPopup} key={key} />
             ))}
         </div>
     )

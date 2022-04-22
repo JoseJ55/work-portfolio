@@ -1,7 +1,6 @@
 import React from 'react';
 import "./ProjectCard.css";
 
-
 function ProjectCard({ project, offset, info, set, popup, setPopup }) {
     let style;
     switch (project.small) {
@@ -19,19 +18,19 @@ function ProjectCard({ project, offset, info, set, popup, setPopup }) {
             break;
         case "three":
             style = {
-                transform: `translateY(${offset * 0.7}px)`,
+                transform: `translateY(${offset * 0.55}px)`,
                 transition: "linear"
             }
             break;
         case "four":
             style = {
-                transform: `translateY(${offset * 0.35}px)`,
+                transform: `translateY(${offset * 0.3}px)`,
                 transition: "linear"
             }
             break;
         case "five":
             style = {
-                transform: `translateY(${offset * 0.5}px)`,
+                transform: `translateY(${offset * 0.45}px)`,
                 transition: "linear"
             }
             break;

@@ -18,7 +18,7 @@
 #one {
     position: absolute;
     right: 40%;
-    top: -10%;
+    top: -5%;
     width: 30%;
     height: 35vh;
     z-index: 6;
@@ -35,7 +35,7 @@
 
 #three {
     position: absolute;
-    top: -15%;
+    top: -5%;
     right: 5%;
     z-index: 5;
 }
@@ -47,7 +47,12 @@
     width: 45%;
     height: 50vh;
     z-index: 1;
+    /* filter: blur(1px); */
 }
+
+/* #four:hover {
+    filter: blur(0);
+} */
 
 #five {
     position: absolute;
@@ -65,7 +70,12 @@
     width: 30%;
     height: 35vh;
     z-index: 4;
+    /* filter: blur(1px) */
 }
+
+/* #six:hover {
+    filter: blur(0);
+} */
 
 @media screen and (max-width: 1500px) {
     #one {
@@ -91,11 +101,16 @@
         width: 40%;
         height: 30vh;
     }
+
+    #six {
+        width: 35%;
+        height: 30vh;
+    }
 }
 
 @media screen and (max-width: 1000px) {
     #one {
-        width: 45%;
+        width: 50%;
         height: 30vh;
         right: 45%;
     }
@@ -105,17 +120,24 @@
     }
 
     #three {
-        width: 40%;
+        width: 50%;
     }
 
     #four {
-        height: 35vh;
+        width: 65%;
+        height: 30vh;
         right: 10%;
     }
 
     #five {
+        width: 45%;
+        height: 20vh;
+        left: 5%;
+    }
+    
+    #six {
+        width: 45%;
         height: 25vh;
-        left: 10%;
     }
 }
 
@@ -128,47 +150,54 @@
 
     #two {
         width: 55%;
-        height: 25vh;
+        height: 15vh;
     }
 
     #three {
-        width: 50%;
-        height: 20vh;
+        width: 55%;
+        height: 15vh;
     }
 
     #four {
         width: 70%;
-        height: 30vh;
+        height: 20vh;
         right: 5%;
         bottom: 50%;
     }
 
     #five {
-        width: 45%;
-        height: 20vh;
-        left: 5%;
+        width: 50%;
+        height: 15vh;
+        left: 3%;
         bottom: 60%;
+    }
+    
+    #six {
+        width: 65%;
+        height: 20vh;
+        right: 13%;
+        bottom: 75%;
     }
 }
 
 @media screen and (max-width: 400px) {
     #one {
         width: 70%;
-        height: 20vh;
+        height: 15vh;
         right: 25%;
         top: -5%;
     }
 
     #two {
         width: 65%;
-        height: 20vh;
+        height: 17vh;
         left: 5%;
         top: 15%;
     }
 
     #three {
         width: 70%;
-        height: 15vh;
+        height: 13vh;
     }
 
     #four {
@@ -180,5 +209,11 @@
     #five {
         width: 65%;
         height: 15vh;
+    }
+
+    #six {
+        width: 55%;
+        height: 10vh;
+        bottom: 65%;
     }
 }
