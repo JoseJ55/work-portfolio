@@ -20,15 +20,16 @@ export function ProjectsProvider({ children }) {
         },
         {
             id: 2,
-            title: "Team Profile Generator",
+            title: "Fiteness 101",
             small: "two",
             links: {
-                github: "https://github.com/JoseJ55/Team-Profile-Generator"
+                github: "https://github.com/JoseJ55/fitness-gym",
+                live: "https://fitness101-28.herokuapp.com/"
             },
-            description: "A node app that ask questions and uses the answers to build a simple webpage with the informaton provided. This application is for users who want a simple webpage that show all employees in a group and there information like role, id, and email. Once the user starts the application they will be prompted on terminal questions about there team members. They will start out with the team manager and then add other team memebers one by one. The user is able to enter information for an enginner role and an intern role where they are prompted different question for their need. After all the questions have been answered an html file will be built based on the answers allowing the user to move the file or copy it to another directory. This application utilizes inquirer to get information and node to build the html file for the user.",
-            tools: ["Express.js", "Node.js", "HTML", "CSS", "inquirer"],
+            description: "A small website using express.js and handlebars engine. The website is mainly used for practice with design and adding suttle animations. Using express to help route and handle the different pages of the website it it fast and easy for user to use. Handlebars was also used it also helps speed up the rendering of the website and maintain the quality of animations and design changes with different screen sizes. The website is also responsive and from 4k to small phone screens it will work with any screen size. Some animations still need to be ploish at certain screen sizes but that is planned for later. A redesign is also in plans for shop page and the trainers page. There are also plans to redesign sections of the website.",
+            tools: ["Express.js", "Node.js", "HTML", "CSS", "Javascript"],
             exampleImage: "sunset.jpg",
-            images: ["/images/teamProfileGenerator/teamProfileGenerator1.png", "/images/teamProfileGenerator/teamProfileGenerator2.png", "/images/teamProfileGenerator/teamProfileGenerator3.png"],
+            images: ["/images/fitnessGym/fitness101Main.png", "/images/fitnessGym/fitness101Main2.png", "/images/fitnessGym/fitness101Main3.png", "/images/fitnessGym/fitness101Main4.png"],
             video: "/videos/teamProfileGenerator/teamProfileGenShowcase.mp4",
         },
         {
@@ -50,7 +51,8 @@ export function ProjectsProvider({ children }) {
             title: "Online Bar",
             small: "four",
             links: {
-                github: "https://github.com/JoseJ55/online-bar"
+                github: "https://github.com/JoseJ55/online-bar",
+                live: "https://online-bar-dc789.web.app/"
             },
             description: "An online bar where you can find any kind of drink from the popular to the most unique. With our simple layout anyone can look up different drinks and get all the details for that drink. A user can search for a specific name of a drink or they can look for ingredients that are in drinks. Whatever the user searchs they will get a drink and find something they would like to try out. Once searched the user will be given information on the drink like ingredients and amounts, and how to make the drink so if someone wants to make it at home they are able to. The webpage uses a lot of api calls to get the data, but all of them are from the same database which allow for consist information and ease of use.",
             tools: ["HTML", "CSS", "Javascript", "React.js", "React Hooks", "cocktaildb API"],
