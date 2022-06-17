@@ -38,8 +38,8 @@ const pBackground = {
                 area: 1000,
                 factor: 1000,
             },
-            limit: 300,
-            value: 200,
+            limit: 200,
+            value: 150,
         },
         shape: {
             options: {},

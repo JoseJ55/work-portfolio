@@ -1,5 +1,6 @@
 import React from 'react';
 import "./ProjectCard.css";
+import Tilt from "react-parallax-tilt";
 
 function ProjectCard({ project, offset, info, set, popup, setPopup }) {
     let style;
@@ -50,10 +51,11 @@ function ProjectCard({ project, offset, info, set, popup, setPopup }) {
 
     return (
         <div 
-            className="portfolio_projects-project" 
-            id={`${project.small}`} 
-            style={style}
+        className="portfolio_projects-project" 
+        id={`${project.small}`} 
+        style={style}
         >
+            <Tilt style={{height: "inherit", width: "100%"}} tiltReverse={true} glareEnable={true}>
             <input 
                 type="button" 
                 className="portfolio_projects-project_image"
@@ -65,6 +67,7 @@ function ProjectCard({ project, offset, info, set, popup, setPopup }) {
                     backgroundImage: `url(${project.images[0]})`
                 }}
             />
+            </Tilt>
         </div>
     )
 }
