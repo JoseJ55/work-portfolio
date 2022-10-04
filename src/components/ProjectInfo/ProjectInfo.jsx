@@ -8,7 +8,7 @@ import { MdWeb } from "react-icons/md";
 import ProjectInfoImages from '../ProjectInfoImages/ProjectInfoImages';
 
 function ProjectInfo({ setPopup, info}) {
-    console.log(info)
+    // console.log(info)
 
   return (
     <div id="ProjectInfo">
