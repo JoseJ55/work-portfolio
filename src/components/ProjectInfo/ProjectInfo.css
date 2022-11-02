@@ -40,22 +40,28 @@
 }
 
 #ProjectInfo-section-head button {
-    background-color: var(--secondary-background-color);
-    border: 1px var(--main-background-color) solid;
-    border-radius: 10px;
+    /* background-color: var(--secondary-background-color); */
+    background-color: transparent;
+    /* border: 1px var(--main-background-color) solid; */
+    border: none;
+    /* border-radius: 10px; */
     padding: .5vh 1vw;
     margin: 0 1vw;
+    color: black;
+    transition: .5s ease-in;
 }
 
 #ProjectInfo-section-head button:hover {
     cursor: pointer;
-    background-color: var(--main-background-color);
-    color: white;
-    border: 1px var(--secondary-background-color) solid;
+    /* background-color: var(--main-background-color); */
+    color: var(--main-background-color);
+    /* border: 1px var(--secondary-background-color) solid; */
+    margin-left: 7px;
+    transition: .5s ease-in;
 }
 
 #ProjectInfo-section-head-icon {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 #ProjectInfo-section-head-links {

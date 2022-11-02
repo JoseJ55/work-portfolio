@@ -3,16 +3,16 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import "./ProjectInfoImages.css";
 
+import Carousel from '../Carousel/Carousel';
+
 function ProjectInfoImages({ images }) {
   return (
     <div id="slide-container">
-      <Slide easing="ease">
-        {images.map((image, index) => (
-          <div className="each-slide" key={index}>
-            <div style={{"backgroundImage": `url(${image})`}}></div>
-          </div>
+      <Carousel>
+        {images.map((image) => (
+          <img src={image} alt="alt" />
         ))}
-      </Slide>
+      </Carousel>
     </div>
   )
 }
