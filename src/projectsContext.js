@@ -29,7 +29,7 @@ export function ProjectsProvider({ children }) {
             description: "A small website using express.js and handlebars engine. The website is mainly used for practice with design and adding suttle animations. Using express to help route and handle the different pages of the website it it fast and easy for user to use. Handlebars was also used it also helps speed up the rendering of the website and maintain the quality of animations and design changes with different screen sizes. The website is also responsive and from 4k to small phone screens it will work with any screen size. Some animations still need to be ploish at certain screen sizes but that is planned for later. A redesign is also in plans for shop page and the trainers page. There are also plans to redesign sections of the website.",
             tools: ["Express.js", "Node.js", "HTML", "CSS", "Javascript"],
             exampleImage: "sunset.jpg",
-            images: ["/images/fitnessGym/fitness101Main.png", "/images/fitnessGym/fitness101Main2.png", "/images/fitnessGym/fitness101Main3.png", "/images/fitnessGym/fitness101Main4.png"],
+            images: ["/images/fitnessGym/fitness101Main.png", "/images/fitnessGym/fitness101main2.png", "/images/fitnessGym/fitness101main3.png", "/images/fitnessGym/fitness101main4.png"],
             video: "/videos/teamProfileGenerator/teamProfileGenShowcase.mp4",
         },
         {
