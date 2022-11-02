@@ -11,11 +11,19 @@ function Carousel({ children }) {
         if (currentIndex < (length - 1)) {
             setCurrentIndex(prevState => prevState + 1);
         }
+
+        if (currentIndex === (length - 1)) {
+            setCurrentIndex(0)
+        }
     }
 
     const prev = () => {
         if (currentIndex > 0) {
             setCurrentIndex(prevState => prevState -1);
+        }
+
+        if(currentIndex === 0) {
+            setCurrentIndex(length - 1);
         }
     }
 
@@ -26,12 +34,9 @@ function Carousel({ children }) {
   return (
     <div className='carousel-container'>
         <div className='carousel-wrapper'> 
-            {
-                currentIndex > 0 &&
-                <button className='carousel-left-arrow' onClick={prev}>
-                    <BsChevronDoubleLeft color='white' size={20} className="carousel-left-icon" />
-                </button>
-            }
+            <button className='carousel-left-arrow' onClick={prev}>
+                <BsChevronDoubleLeft color='white' size={20} className="carousel-left-icon" />
+            </button>
 
             <div className='carousel-content-wrapper'>
                 <div className='carousel-content' style={{ transform: `translateX(-${currentIndex * 100}%)`}}>
@@ -39,12 +44,9 @@ function Carousel({ children }) {
                 </div>
             </div>
 
-            {
-                currentIndex < (length - 1) &&
-                <button className='carousel-right-arrow' onClick={next}>
-                    <BsChevronDoubleRight color='white' size={20} className="carousel-right-icon" />
-                </button>
-            }
+            <button className='carousel-right-arrow' onClick={next}>
+                <BsChevronDoubleRight color='white' size={20} className="carousel-right-icon" />
+            </button>
         </div>
     </div>
   )
