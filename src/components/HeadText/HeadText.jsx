@@ -4,7 +4,8 @@ import "./HeadText.css"
 function HeadText() {
   return (
     <div id="portfolio_header-headtext">
-        <h1>Hello, I am Jose Jimenez.</h1>
+        <p>Hello, I am <span>Jose Jimenez</span>.</p>
+        <p>I'm a web developer</p>
     </div>
   )
 }

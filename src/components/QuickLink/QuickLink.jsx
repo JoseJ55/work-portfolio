@@ -8,14 +8,27 @@ function QuickLink() {
     <div id="portfolio_header-quicklink">
       <button 
         id="portfolio_header-quicklink_box" 
-          onClick={e => {
-          let a = document.getElementById("portfolio_projects");
-          e.preventDefault();
-          a && a.scrollIntoView({ behavior: "smooth", block: "start"});
+        // onMouseEnter={e => {
+        //   let a = document.getElementById("portfolio_header-quicklink_box_back");
+        //   e.preventDefault();
+        //   a.style.animation = 'arrowMove 2s infinite';
+        // }}
+        // onMouseOut={e => {
+        //   let a = document.getElementById("portfolio_header-quicklink_box_back");
+        //   e.preventDefault();
+        //   a.style.animation = '';
+        // }}
+        onClick={e => {
+        let a = document.getElementById("portfolio_projects");
+        e.preventDefault();
+        a && a.scrollIntoView({ behavior: "smooth", block: "start"});
         }}
       >
-        <h3>See My Projects</h3>
-        <AiFillCaretDown id="portfolio_header-quicklink_box_down" />
+        <h3>Projects</h3>
+        <div id='portfolio_header-quicklink_box-icons'>
+          <AiFillCaretDown id="portfolio_header-quicklink_box_back" className="portfolio_header-quicklink_box_down" />
+          <AiFillCaretDown className="portfolio_header-quicklink_box_down" />
+        </div>
       </button>
     </div>
   )
