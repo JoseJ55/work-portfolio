@@ -1,0 +1,25 @@
+.automatic-carousel-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* Adjust the maximum width as per your requirement */
+    margin: 0 auto;
+  }
+  
+  .automatic-carousel {
+    display: flex;
+    animation: sliding 20s linear infinite;
+  }
+  
+  @keyframes sliding {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .carousel-item {
+    flex: 0 0 150px; /* Assuming each logo has a width of 150px */
+    margin-right: 20px; /* Adjust the spacing between logos as per your requirement */
+  }

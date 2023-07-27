@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-background-color);
+    /* background-color: var(--main-background-color); */
+    background-color: red;
     position: relative;
     z-index: 100;
 }
@@ -25,6 +26,9 @@
 .portfolio_skills-area_icon {
     position: relative;
     z-index: 20;
+    margin-right: 5vw;
+    animation: slideLeft 2s linear infinite;
+    animation-direction: alternate;
 }
 
 .portfolio_skills-area_icon .portfolio_skills-area_icon-tool_tip {
@@ -115,5 +119,14 @@
 @media screen and (min-width: 2000px) {
     #portfolio_skills ul {
         width: 60%;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
