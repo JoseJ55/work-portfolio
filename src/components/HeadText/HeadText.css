@@ -18,7 +18,7 @@
 }
 
 #portfolio_header-headtext span {
-    color: var(--secondary-background-color);
+    color: var(--main-background-color);
     font-weight: bold;
 }
 

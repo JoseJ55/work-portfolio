@@ -6,6 +6,7 @@ import Skills from '../components/Skills/Skills';
 import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
 import ProjectInfo from '../components/ProjectInfo/ProjectInfo';
+import Wave from '../components/Wave/Wave';
 
 function Home({ offset }) {
     const [projectDetail, setPorjectDetail] = useState({});
@@ -16,7 +17,9 @@ function Home({ offset }) {
         <Header />
         <Projects offset={offset} info={projectDetail} set={setPorjectDetail} popup={popup} setPopup={setPopup} />
         {/* <Skills /> */}
+        <Wave />
         <About />
+        <Wave />
         <Contact />
         {popup ? <ProjectInfo setPopup={setPopup} info={projectDetail} /> : <></>}
     </div>

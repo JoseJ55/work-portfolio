@@ -4,7 +4,7 @@
 }
 
 .portfolio_projects-project:hover {
-    z-index: 10000;
+    z-index: 100;
 }
 
 .portfolio_projects-project_image {
@@ -24,7 +24,7 @@
 #one {
     position: absolute;
     right: 40%;
-    top: -5%;
+    top: 10%;
     width: 30%;
     height: 35vh;
     z-index: 6;
@@ -33,7 +33,7 @@
 #two {
     position: absolute;
     left: 10%;
-    top: 10%;
+    top: 15%;
     width: 35%;
     height: 40vh;
     z-index: 2;
@@ -41,14 +41,14 @@
 
 #three {
     position: absolute;
-    top: -5%;
+    top: 10%;
     right: 5%;
     z-index: 5;
 }
 
 #four {
     position: absolute;
-    bottom: 45%;
+    bottom: 50%;
     right: 15%;
     width: 45%;
     height: 50vh;
@@ -63,7 +63,7 @@
 #five {
     position: absolute;
     left: 15%;
-    bottom: 55%;
+    bottom: 60%;
     width: 35%;
     height: 40vh;
     z-index: 3;
@@ -71,8 +71,8 @@
 
 #six {
     position: absolute;
-    right: 20%;
-    bottom: 80%;
+    right: 30%;
+    bottom: 60%;
     width: 30%;
     height: 35vh;
     z-index: 4;

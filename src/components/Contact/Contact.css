@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     background-color: var(--main-background-color);
-    padding: 5vh 0;
+    padding: 50vh 0 30vh 0;
 }
 
 #contact {
