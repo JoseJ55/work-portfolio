@@ -1,51 +1,15 @@
 #portfolio_contact {
-    position: absolute;
+    position: relative;
     z-index:100;
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: var(--main-background-color);
-    padding: 50vh 0 30vh 0;
-}
-
-#contact {
-    width: 20%;
-    padding: 2vh 0;
-}
-
-#contactTitle {
-    margin: 0  0 2vh 0;
-    font-family: var(--font);
-}
-
-.contactItem{
-    padding: 1vh 0;
-    font-family: var(--font);
-}
-
-.contactItem a {
-    text-decoration: none;
-    color: var(--secondary-background-color)
-}
-
-.contactItem a:hover {
-    color: white;
-}
-
-#contactIcons {
-    display: flex;
-    padding: 1vh 0;
-    /* color: var(--secondary-background-color); */
-}
-
-.icon {
-    /* color: var(--secondary-background-color); */
-    color: white;
-    font-size: 2rem;
+    padding: 60vh 0 40vh 0;
 }
 
 #email {
-    width: 40%;
+    width: 50%;
     align-items: center;
     display: flex;
     flex-wrap: wrap;

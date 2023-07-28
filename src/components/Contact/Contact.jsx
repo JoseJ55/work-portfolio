@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Contact.css";
 import emailjs from "emailjs-com";
 
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Notice from "./../Notice/Notice";
 
 // require('dotenv').config();
@@ -96,16 +95,6 @@ function Contact(){
 
     return (
         <div id="portfolio_contact">
-            <div id="contact">
-                <h2 id="contactTitle">GET IN TOUCH</h2>
-                <p className="contactItem">Email: <a href="mailto:josejimenez826@gmail.com">josejimenez826@gmail.com</a></p>
-                <p className="contactItem">Phone: 1-(760)-221-2790</p>
-                <div id="contactIcons">
-                    <a href="https://github.com/JoseJ55"><AiFillGithub className="icon"/></a>
-                    <a href="https://www.linkedin.com/in/jose-jimenez-238453169"><AiFillLinkedin className="icon"/></a>
-                </div>
-            </div>
-
             <div id="email">
                 <div id="email-top">
                     <input 
@@ -127,7 +116,7 @@ function Contact(){
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
-                <input 
+                {/* <input 
                     id="emailSub" 
                     className="emailItem" 
                     type="text" 
@@ -135,7 +124,7 @@ function Contact(){
                     style={inputError.subject}
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                />
+                /> */}
                 <textarea 
                     id="emailMessage" 
                     className="emailItem" 

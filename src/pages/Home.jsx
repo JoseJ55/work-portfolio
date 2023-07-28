@@ -7,6 +7,7 @@ import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
 import ProjectInfo from '../components/ProjectInfo/ProjectInfo';
 import Wave from '../components/Wave/Wave';
+import Footer from '../components/Footer/Footer';
 
 function Home({ offset }) {
     const [projectDetail, setPorjectDetail] = useState({});
@@ -21,6 +22,7 @@ function Home({ offset }) {
         <About />
         <Wave />
         <Contact />
+        <Footer />
         {popup ? <ProjectInfo setPopup={setPopup} info={projectDetail} /> : <></>}
     </div>
   )

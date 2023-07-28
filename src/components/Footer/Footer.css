@@ -1,0 +1,36 @@
+#footer {
+    width: 100%;
+    background-color: var(--main-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15vh 0;
+}
+
+#footer-main {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-main-item {
+    padding: 1vh 0;
+    font-family: var(--font);
+}
+
+.footer-main-item a {
+    text-decoration: none;
+    color: var(--secondary-background-color)
+}
+
+#footer-main-icons {
+    display: flex;
+    padding: 1vh 0;
+}
+
+.icon {
+    color: white;
+    font-size: 2rem;
+}
