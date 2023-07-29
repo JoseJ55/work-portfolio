@@ -17,6 +17,7 @@
     margin: 1.5vh 0 10vh 0;
     transform: rotate(-5deg);
     z-index: 102;
+    animation: fadeLeft 2s forwards;
 }
 
 #portfolio_about p {
@@ -27,6 +28,7 @@
     z-index: 102;
     margin: 1vh 0;
     line-height: 1.5rem;
+    animation: fadeRight 2s forwards;
 }
 
 #portfolio_about_shape {
@@ -34,6 +36,28 @@
     width: 0;
     height: 0;
     z-index: 0;
+}
+
+@keyframes fadeRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateX(0%); 
+        opacity: 1;
+    }
+}
+
+@keyframes fadeLeft {
+    0% {
+        transform: rotate(-5deg) translateX(-100%);
+        opacity: 0;
+    }
+    100% { 
+        transform: rotate(-5deg) translateX(0%); 
+        opacity: 1;
+    }
 }
 
 @media screen and (min-width: 2000px) {

@@ -5,6 +5,7 @@
   position: relative;
   background-color: var(--main-background-color);
   z-index: 101;
+  animation: fadeIn 2s forwards;
 }
 
 .wave-up {
@@ -21,4 +22,13 @@
   top: 100%;
   z-index: 101;
   background-color: transparent;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

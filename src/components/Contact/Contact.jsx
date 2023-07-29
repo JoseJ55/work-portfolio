@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Contact.css";
 import emailjs from "emailjs-com";
 
@@ -7,6 +7,7 @@ import Notice from "./../Notice/Notice";
 // require('dotenv').config();
 
 function Contact(){
+    const [isVisible, setIsVisible] = useState(false);
     const [notice, setNotice] = useState(false);
     const [noticeText, setNoticeText] = useState("");
     const [name, setName] = useState("");
@@ -93,6 +94,23 @@ function Contact(){
         setInputError(temp);
     }
 
+    useEffect(() => {
+        const handleScroll = () => {
+          const { top } = document.getElementById('email').getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+    
+          if (top < windowHeight) {
+            setIsVisible(true);
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+          
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div id="portfolio_contact">
             <div id="email">
@@ -102,7 +120,7 @@ function Contact(){
                         className="emailItem" 
                         type="text" 
                         placeholder="Name" 
-                        style={inputError.name}
+                        style={{ ...inputError.name,  display: isVisible ? 'block' : 'none' }}
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -111,27 +129,18 @@ function Contact(){
                         className="emailItem" 
                         type="text" 
                         placeholder="Email" 
-                        style={inputError.email}
+                        style={{ ...inputError.email, display: isVisible ? 'block' : 'none' }}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
-                {/* <input 
-                    id="emailSub" 
-                    className="emailItem" 
-                    type="text" 
-                    placeholder="Subject" 
-                    style={inputError.subject}
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                /> */}
                 <textarea 
                     id="emailMessage" 
                     className="emailItem" 
                     type="text" 
                     placeholder="Type you message here..." 
                     rows="7" 
-                    style={inputError.text}
+                    style={{ ...inputError.text, display: isVisible ? 'block' : 'none' }}
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                 />
@@ -141,12 +150,7 @@ function Contact(){
                     type="button" 
                     value="Submit" 
                     onClick={() => sendData()}
-                    // onClick={() => {
-                    //     console.log(name)
-                    //     console.log(email)
-                    //     console.log(subject)
-                    //     console.log(text)
-                    // }}
+                    style={{ display: isVisible ? 'block' : 'none' }}
                 />
             </div>
             {notice ? <Notice notice={notice} setNotice={setNotice} noticeText={noticeText}/> : <div></div>}

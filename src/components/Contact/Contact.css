@@ -49,10 +49,12 @@
 
 #emailName {
     width: 43%;
+    animation: fadeUp 1s forwards;
 }
 
 #emailEmail {
     width: 43%;
+    animation: fadeUp 1s forwards;
 }
 
 #emailSub {
@@ -62,6 +64,7 @@
 #emailMessage {
     font-family: inherit;
     resize: none;
+    animation: fadeUp 1s forwards;
 }
 
 #emailMessage::-webkit-scrollbar {
@@ -82,6 +85,7 @@
     border: 1px var(--secondary-background-color) solid;
     border-radius: 10px;
     font-size: 110%;
+    animation: fadeUp 1s forwards;
 }
 
 #emailBtn:hover {
@@ -89,6 +93,17 @@
     border: 1px var(--main-background-color) solid;
     cursor: pointer;
     transition-duration: .5s;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width: 1000px){

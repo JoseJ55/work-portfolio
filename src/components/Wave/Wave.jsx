@@ -1,22 +1,35 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './Wave.css';
 
 import waveUp from './waveUp.svg';
 import waveDown from './waveDown.svg';
 
 function Wave() {
-  return (
-    <div className='wave'>
-        {/* <div class="box"></div>
-        <div class="box"></div> */}
-        {/* <div class="box mask"></div> */}
-        {/* <svg viewBox="0 0 500 200">
-  <path d="M 0,100 C 150,200 350,0 500,100 L 500,00 L 0,0"></path>
-</svg> */}
+  const waveRef = useRef();
+  const bottomWaveRef = useRef();
+  const [isVisible, setIsVisible] = useState(false);
 
-{/* <svg id="visual" viewBox="0 0 675 300" width="675" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 221L12.5 219.3C25 217.7 50 214.3 75 215.5C100 216.7 125 222.3 150 225.2C175 228 200 228 225 228C250 228 275 228 300 225.2C325 222.3 350 216.7 375 213.7C400 210.7 425 210.3 450 212.2C475 214 500 218 525 219.3C550 220.7 575 219.3 600 219.5C625 219.7 650 221.3 662.5 222.2L675 223L675 301L662.5 301C650 301 625 301 600 301C575 301 550 301 525 301C500 301 475 301 450 301C425 301 400 301 375 301C350 301 325 301 300 301C275 301 250 301 225 301C200 301 175 301 150 301C125 301 100 301 75 301C50 301 25 301 12.5 301L0 301Z" fill="#a159f3"></path><path d="M0 236L12.5 235.2C25 234.3 50 232.7 75 235.8C100 239 125 247 150 249.2C175 251.3 200 247.7 225 242.7C250 237.7 275 231.3 300 232.3C325 233.3 350 241.7 375 248.2C400 254.7 425 259.3 450 257.3C475 255.3 500 246.7 525 242.3C550 238 575 238 600 237C625 236 650 234 662.5 233L675 232L675 301L662.5 301C650 301 625 301 600 301C575 301 550 301 525 301C500 301 475 301 450 301C425 301 400 301 375 301C350 301 325 301 300 301C275 301 250 301 225 301C200 301 175 301 150 301C125 301 100 301 75 301C50 301 25 301 12.5 301L0 301Z" fill="#7e46bd"></path><path d="M0 269L12.5 271.2C25 273.3 50 277.7 75 275.8C100 274 125 266 150 265.7C175 265.3 200 272.7 225 276.7C250 280.7 275 281.3 300 281.7C325 282 350 282 375 277.7C400 273.3 425 264.7 450 264.5C475 264.3 500 272.7 525 272C550 271.3 575 261.7 600 259.5C625 257.3 650 262.7 662.5 265.3L675 268L675 301L662.5 301C650 301 625 301 600 301C575 301 550 301 525 301C500 301 475 301 450 301C425 301 400 301 375 301C350 301 325 301 300 301C275 301 250 301 225 301C200 301 175 301 150 301C125 301 100 301 75 301C50 301 25 301 12.5 301L0 301Z" fill="#5c338a"></path></svg> */}
-    <img className='wave-up' src={waveUp} alt='wave up' />
-    <img className='wave-down' src={waveDown} alt='wave down' />
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = bottomWaveRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (element.top < windowHeight) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+      
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <div className='wave' ref={waveRef} style={{ display: isVisible ? 'block' : 'none' }}>
+        <img className='wave-up' src={waveUp} alt='wave up' />
+        <img className='wave-down' src={waveDown} alt='wave down' ref={bottomWaveRef}/>
     </div>
   )
 }
