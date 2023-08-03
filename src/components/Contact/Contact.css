@@ -106,22 +106,30 @@
     }
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (min-width: 2000px){
     #contact {
         width: 30%;
     }
-
     #email {
-        width: 50%;
+        width: 40%;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media only screen and (max-width: 1100px){
+    #contact {
+        width: 30%;
+    }
+    #email {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 800px) {
     #contact {
         width: 35%;
     }
      #email {
-        width: 55%;
+        width: 75%;
      }
 }
 

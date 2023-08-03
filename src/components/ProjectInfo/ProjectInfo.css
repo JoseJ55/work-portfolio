@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 101;
+    z-index: 105;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +29,7 @@
     max-height: 635px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #section-projectInfo {
@@ -140,16 +141,23 @@
 }
 
 @media screen and (min-width: 2000px) {
+    #ProjectInfo-section {
+        width: 75%;
+        height: 100%;
+    }
+    #section-projectInfo {
+        max-height: 40%;
+    }
     #ProjectInfo-section-head-icon {
         font-size: 1.5rem;
     }
 
     #ProjectInfo-section h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     #ProjectInfo-section-desc {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     #ProjectInfo-section-tools {
@@ -157,7 +165,14 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
+    #ProjectInfo-section {
+        width: 85%;
+        height: 60%;
+    }
+    #section-projectInfo {
+        max-height: 40%;
+    }
     #ProjectInfo-section-head-icon {
         font-size: 1.1rem;
     }
@@ -171,7 +186,7 @@
     }
 
     #ProjectInfo-section-desc {
-        font-size: .9rem;
+        font-size: 1.1rem;
     }
 
     #ProjectInfo-section-tools {
@@ -179,7 +194,14 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
+    #ProjectInfo-section {
+        width: 85%;
+        height: 45%;
+    }
+    #section-projectInfo {
+        max-height: 70%;
+    }
     #ProjectInfo-section-head-icon {
         font-size: 1rem;
     }
@@ -189,11 +211,11 @@
     }
 
     #ProjectInfo-section h1 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     #ProjectInfo-section-desc {
-        font-size: .7rem;
+        font-size: 1rem;
     }
 
     #ProjectInfo-section-tools {
@@ -204,8 +226,11 @@
 @media screen and (max-width: 500px) {
     #ProjectInfo-section {
         width: 85%;
+        height: 40%;
     }
-
+    #section-projectInfo {
+        max-height: 70%;
+    }
     #ProjectInfo-section-head-icon {
         font-size: .9rem;
     }
@@ -215,13 +240,13 @@
     }
 
     #ProjectInfo-section h1 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         padding: 1vh 0;
     }
 
     #ProjectInfo-section-desc {
-        font-size: .7rem;
-        width: 85%;
+        font-size: .8rem;
+        width: 100%;
     }
 
     #ProjectInfo-section-tools ul {
@@ -229,7 +254,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     #ProjectInfo-section {
         width: 95%;
     }
@@ -261,4 +286,4 @@
         width: 95%;
         font-size: .5rem;
     }
-}
+} */
