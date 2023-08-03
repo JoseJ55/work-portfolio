@@ -4,8 +4,6 @@ import emailjs from "emailjs-com";
 
 import Notice from "./../Notice/Notice";
 
-// require('dotenv').config();
-
 function Contact(){
     const [isVisible, setIsVisible] = useState(false);
     const [notice, setNotice] = useState(false);
@@ -23,9 +21,6 @@ function Contact(){
     })
 
     const sendData = () => {
-        // setNotice(true);
-        // setNoticeText("test");
-
         verify();
         
         let mail = {
@@ -46,7 +41,6 @@ function Contact(){
                 "user_XiAqAO8SE5exdjP8TwO0u"
             )
             .then((result) => {
-                // console.log(result)
                 setName("");
                 setEmail("");
                 setSubject("");
@@ -55,7 +49,6 @@ function Contact(){
                 setNotice(true);
                 setNoticeText("success")
             }).catch((err) => {
-                // console.log(err)
                 setNotice(true);
                 setNoticeText("error");
             })

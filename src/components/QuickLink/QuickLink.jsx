@@ -7,17 +7,7 @@ function QuickLink() {
   return (
     <div id="portfolio_header-quicklink">
       <button 
-        id="portfolio_header-quicklink_box" 
-        // onMouseEnter={e => {
-        //   let a = document.getElementById("portfolio_header-quicklink_box_back");
-        //   e.preventDefault();
-        //   a.style.animation = 'arrowMove 2s infinite';
-        // }}
-        // onMouseOut={e => {
-        //   let a = document.getElementById("portfolio_header-quicklink_box_back");
-        //   e.preventDefault();
-        //   a.style.animation = '';
-        // }}
+        id="portfolio_header-quicklink_box"
         onClick={e => {
         let a = document.getElementById("portfolio_projects");
         e.preventDefault();

@@ -9,21 +9,9 @@
     max-height: 30%;
 }
 
-.each-slide > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 400px;
-}
-
 @media screen and (min-width: 2000px) {
     #slide-container {
         width: 100%;
-    }
-
-    .each-slide > div {
-        height: 500px;
     }
 }
 
@@ -31,28 +19,18 @@
     #slide-container {
         max-height: 60%;
     }
-    .each-slide > div {
-        height: 300px;
-    }
 }
 
 @media screen and (max-width: 800px) {
-    .each-slide > div {
-        height: 200px;
-    }
+
 }
 
 @media screen and (max-width: 500px) {
     #slide-container {
         max-height: 30%;
     }
-    .each-slide > div {
-        height: 175px;
-    }
 }
 
 @media screen and (max-width: 400px) {
-    .each-slide > div {
-        height: 125px;
-    }
+
 }
