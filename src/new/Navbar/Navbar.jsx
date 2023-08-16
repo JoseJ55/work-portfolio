@@ -9,10 +9,22 @@ function Navbar() {
   return (
     <div id='navbar'>
         <div id='navbar-links'>
-            <p>Home</p>
-            <p>Projects</p>
-            <p>About</p>
-            <p>Contact</p>
+            <div className='navbar-link'>
+                <p>Home</p>
+                <div className='navbar-link-active'></div>
+            </div>
+            <div className='navbar-link'>
+                <p>Projects</p>
+                <div className='navbar-link-active'></div>
+            </div>
+            <div className='navbar-link'>
+                <p>About</p>
+                <div className='navbar-link-active'></div>
+            </div>
+            <div className='navbar-link'>
+                <p>Contact</p>
+                <div className='navbar-link-active'></div>
+            </div>
         </div>
 
         <div id='navbar-social'>

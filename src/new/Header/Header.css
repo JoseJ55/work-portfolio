@@ -9,14 +9,53 @@
     position: relative;
 }
 
+.header-back-icon {
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#header-back-first {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    animation: floatAbout1 6s infinite;
+}
+
+#header-back-second {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+    animation: floatAbout2 6s infinite;
+}
+
+#header-back-third {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 17%;
+    right: 25%;
+    animation: floatAbout3 6s infinite;
+}
+
 #header-text {
     align-items: start;
+    z-index: 2;
 }
 
 #header p {
     color: var(--text-color);
     font-size: 90px;
     font-family: var(--font-text);
+    text-shadow: 4px 2px var(--third-color);
 }
 
 #header span {
@@ -31,6 +70,7 @@
     height: 50px;
     background-color: var(--secondary-color);
     border-radius: 50%;
+    z-index: 2;
 }
 
 #header-action:hover {
@@ -56,4 +96,89 @@
 
 #icon-forward {
     left: 60%;
+}
+
+#header-action:hover #icon-back{
+    animation: iconBack 2s infinite;
+}
+
+#header-action:hover #icon-forward{
+    animation: iconForward 2s infinite;
+}
+
+@keyframes iconForward {
+    0% {
+        left: 60%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 60%;
+    }
+}
+@keyframes iconBack {
+    0% {
+        left: 40%;
+    }
+    50% {
+        left: 30%;
+    }
+    100% {
+        left: 40%;
+    }
+}
+
+@keyframes floatAbout1 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    25% {
+        transform: translate(10%, -15%);
+    }
+    50% {
+        transform: translateY(-10%, -15%);
+    }
+    75% {
+        transform: translateY(-10%, 15%);
+    }
+    100% {
+        transform: translateY(0%, 0%);
+    }
+}
+
+@keyframes floatAbout2 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    25% {
+        transform: translate(10%, 15%);
+    }
+    50% {
+        transform: translateY(5%, 5%);
+    }
+    75% {
+        transform: translateY(10%, 5%);
+    }
+    100% {
+        transform: translateY(0%, 0%);
+    }
+}
+
+@keyframes floatAbout3 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    25% {
+        transform: translate(-5%, -10%);
+    }
+    50% {
+        transform: translateY(-5%, -5%);
+    }
+    75% {
+        transform: translateY(0%, -10%);
+    }
+    100% {
+        transform: translateY(0%, 0%);
+    }
 }

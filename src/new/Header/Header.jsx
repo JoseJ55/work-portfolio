@@ -5,6 +5,10 @@ import { MdArrowForwardIos } from 'react-icons/md';
 function Header() {
   return (
     <div id='header'>
+        <div className='header-back-icon' id='header-back-first'></div>
+        <div className='header-back-icon' id='header-back-second'></div>
+        <div className='header-back-icon' id='header-back-third'></div>
+        
         <div id='header-text'>
             <p>Hello<span>,</span></p>
             <p>I am</p>
