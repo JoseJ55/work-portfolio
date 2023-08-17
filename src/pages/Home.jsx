@@ -18,6 +18,7 @@ import About from '../new/About/About';
 import Skills from '../new/Skills/Skills';
 import Experience from '../new/Experience/Experience';
 import Contact from '../new/Contact/Contact';
+import Footer from '../new/Footer/Footer';
 
 function Home({ offset }) {
     const [projectDetail, setPorjectDetail] = useState({});
@@ -43,6 +44,7 @@ function Home({ offset }) {
           <Skills />
           <Experience />
           <Contact />
+          <Footer />
         </div>
         {/* <Scrollbar /> */}
     </div>
