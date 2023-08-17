@@ -11,7 +11,9 @@ import './Home.css';
 // import Footer from '../components/Footer/Footer';
 
 import Header from '../new/Header/Header';
+import Scrollbar from '../new/Scrollbar/Scrollbar';
 import Navbar from '../new/Navbar/Navbar';
+import Projects from '../new/Projects/Projects';
 
 function Home({ offset }) {
     const [projectDetail, setPorjectDetail] = useState({});
@@ -30,7 +32,11 @@ function Home({ offset }) {
         {popup ? <ProjectInfo setPopup={setPopup} info={projectDetail} /> : <></>} */}
 
         <Navbar />
-        <Header />
+        <div id='pages'>
+          <Header />
+          <Projects />
+        </div>
+        {/* <Scrollbar /> */}
     </div>
   )
 }

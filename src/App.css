@@ -34,23 +34,20 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  background: var(--secondary-background-color);
+  width: 25px;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
-  background: white;
-  border: 1px solid var(--secondary-background-color);
+  background: var(--third-color);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--main-background-color);
-  /* background: var(--secondary-background-color); */
-  border: 1px solid var(--secondary-background-color);
+  background: var(--secondary-color);
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: white;
-}
+/* ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--third-color);
+} */
