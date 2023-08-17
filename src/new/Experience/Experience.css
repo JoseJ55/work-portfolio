@@ -1,0 +1,40 @@
+#experience {
+    min-width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#experience-title {
+    font-family: var(--font-text);
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    transform: rotate(-90deg);
+}
+
+#experience-info {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.experience-info-section {
+    width: 100%;
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 0;
+}
+
+.experience-info-break {
+    width: 100%;
+    height: 0.5%;
+    background-color: var(--third-color);
+}
