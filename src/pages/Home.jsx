@@ -15,6 +15,7 @@ import Scrollbar from '../new/Scrollbar/Scrollbar';
 import Navbar from '../new/Navbar/Navbar';
 import Projects from '../new/Projects/Projects';
 import About from '../new/About/About';
+import Skills from '../new/Skills/Skills';
 
 function Home({ offset }) {
     const [projectDetail, setPorjectDetail] = useState({});
@@ -37,6 +38,7 @@ function Home({ offset }) {
           <Header />
           <Projects />
           <About />
+          <Skills />
         </div>
         {/* <Scrollbar /> */}
     </div>
