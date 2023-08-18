@@ -34,13 +34,15 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 25px;
-  display: none;
+  width: 15px;
+  height: 15px;
+  border: 10px solid transparent;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--third-color);
   border-radius: 10px;
+  border: 10px transparent solid;
 }
 
 ::-webkit-scrollbar-thumb {

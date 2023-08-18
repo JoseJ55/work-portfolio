@@ -1,14 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Home.css';
-
-// import Header from '../components/Header/Header';
-// import Projects from '../components/Projects/Projects';
-// // import Skills from '../components/Skills/Skills';
-// import About from '../components/About/About';
-// import Contact from '../components/Contact/Contact';
-// import ProjectInfo from '../components/ProjectInfo/ProjectInfo';
-// import Wave from '../components/Wave/Wave';
-// import Footer from '../components/Footer/Footer';
 
 import Header from '../new/Header/Header';
 import Scrollbar from '../new/Scrollbar/Scrollbar';
@@ -24,20 +15,28 @@ function Home({ offset }) {
     const [projectDetail, setPorjectDetail] = useState({});
     const [popup, setPopup] = useState(false);
 
+    const pagesRef = useRef(null);
+
+  const handleScroll = (e) => {
+    if (!pagesRef.current) return;
+
+    pagesRef.current.scrollTo({
+      left: pagesRef.current.scrollLeft + (e.deltaY * 1.5),
+      behavior: 'smooth',
+      duration: 500
+    });
+  }
+
+  useEffect(() => {
+    window.addEventListener("wheel", handleScroll);
+
+    return () => window.removeEventListener("wheel", handleScroll)
+  }, [])
+
   return (
     <div id='home'>
-        {/* <Header />
-        <Projects offset={offset} info={projectDetail} set={setPorjectDetail} popup={popup} setPopup={setPopup} /> */}
-        {/* <Skills /> */}
-        {/* <Wave />
-        <About />
-        <Wave />
-        <Contact />
-        <Footer />
-        {popup ? <ProjectInfo setPopup={setPopup} info={projectDetail} /> : <></>} */}
-
         <Navbar />
-        <div id='pages'>
+        <div id='pages' ref={pagesRef}>
           <Header />
           <Projects />
           <About />

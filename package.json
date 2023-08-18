@@ -19,6 +19,7 @@
     "react-scripts": "5.0.0",
     "react-slick": "^0.29.0",
     "react-tsparticles": "^1.41.5",
+    "simplebar-react": "^3.2.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
