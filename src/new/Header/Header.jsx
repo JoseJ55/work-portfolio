@@ -15,7 +15,12 @@ function Header() {
             <p><span>Jose</span></p>
         </div>
 
-        <div id='header-action'>
+        <div id='header-action' onClick={e => {
+          let home = document.getElementById("home");
+          let projects = document.getElementById("projects");
+          e.preventDefault();
+          home && projects.scrollIntoView({ behavior: "smooth", block: "start"});
+        }}>
             <div id='header-action-icons'>
                 <MdArrowForwardIos className='header-action-icon' id='icon-back' />
                 <MdArrowForwardIos className='header-action-icon' id='icon-forward' />

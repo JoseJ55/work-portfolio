@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Home.css';
 
 import Header from '../new/Header/Header';
-import Scrollbar from '../new/Scrollbar/Scrollbar';
 import Navbar from '../new/Navbar/Navbar';
 import Projects from '../new/Projects/Projects';
 import About from '../new/About/About';
@@ -45,7 +44,6 @@ function Home({ offset }) {
           <Contact />
           <Footer />
         </div>
-        {/* <Scrollbar /> */}
     </div>
   )
 }
