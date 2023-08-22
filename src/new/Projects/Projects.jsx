@@ -1,7 +1,15 @@
 import React from 'react';
 import './Projects.css';
 
+import { useSelector } from 'react-redux';
+
+import ProjectTabs from '../ProjectTabs/ProjectTabs';
+import ProjectImage from '../ProjectImage/ProjectImage';
+
 function Projects() {
+
+  const { all } = useSelector((state) => state.projects);
+
   return (
     <div id='projects'>
       <div id='project-title'>
@@ -12,20 +20,18 @@ function Projects() {
       </div>
 
       <div id='projects-tabs'>
-        <button className='projects-tab'>Project 1</button>
+        <ProjectTabs data={all[0]} />
         <div className='projects-tabs-break'></div>
-        <button className='projects-tab'>Project 2</button>
+        <ProjectTabs data={all[1]} />
         <div className='projects-tabs-break'></div>
-        <button className='projects-tab'>Project 3</button>
+        <ProjectTabs data={all[2]} />
         <div className='projects-tabs-break'></div>
-        <button className='projects-tab'>Project 4</button>
+        <ProjectTabs data={all[3]} />
         <div className='projects-tabs-break'></div>
-        <button className='projects-tab'>Project 5</button>
+        <ProjectTabs data={all[4]} />
       </div>
 
-      <div id='project-images'>
-
-      </div>
+      <ProjectImage data={all} />
     </div>
   )
 }
