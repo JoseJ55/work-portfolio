@@ -1,0 +1,28 @@
+.about-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.about-text p {
+    font-family: var(--font-text);
+    font-size: 1rem;
+    color: var(--text-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+    100% {
+        top: 0%;
+        opacity: 1;
+    }
+}

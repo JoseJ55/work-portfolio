@@ -42,9 +42,3 @@
     align-items: center;
     flex-direction: column;
 }
-
-#about-desc p {
-    font-family: var(--font-text);
-    font-size: 1rem;
-    color: var(--text-color)
-}
