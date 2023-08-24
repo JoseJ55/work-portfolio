@@ -1,5 +1,5 @@
 #experience {
-    min-width: 60%;
+    min-width: 70%;
     height: 100%;
     display: flex;
     justify-content: flex-start;
@@ -31,6 +31,23 @@
     justify-content: space-between;
     align-items: center;
     margin: 5% 0;
+}
+
+.experience-info-section-title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.experience-info-section-title-icon {
+    margin-right: 2%;
+    color: var(--secondary-color);
+    font-size: 1.7rem;
+}
+
+.experience-info-section-date {
+    width: 30%;
+    text-align: end;
 }
 
 .experience-info-break {

@@ -1,6 +1,9 @@
 import React from 'react';
 import './Experience.css';
 
+import { BsBuilding } from 'react-icons/bs';
+import { IoMdSchool } from 'react-icons/io';
+
 function Experience() {
   return (
     <div id='experience'>
@@ -8,18 +11,31 @@ function Experience() {
 
         <div id='experience-info'>
             <div className='experience-info-section'>
-                <p>Victor Valley College</p>
-                <p>2020</p>
+                <div className='experience-info-section-title'>
+                    <IoMdSchool className='experience-info-section-title-icon' />
+                    <p>Victor Valley College</p>
+                </div>
+                <p className='experience-info-section-date'>2020</p>
             </div>
+
             <div className='experience-info-break'></div>
+
             <div className='experience-info-section'>
-                <p>University of California Riverside</p>
-                <p>2021</p>
+                <div className='experience-info-section-title'>
+                    <IoMdSchool className='experience-info-section-title-icon' />
+                    <p>University of California Riverside</p>
+                </div>
+                <p className='experience-info-section-date'>2021</p>
             </div>
+
             <div className='experience-info-break'></div>
+
             <div className='experience-info-section'>
-                <p>FOMO Social .inc</p>
-                <p>2021 - now</p>
+                <div className='experience-info-section-title'>
+                    <BsBuilding className='experience-info-section-title-icon' />
+                    <p>FOMO Social .inc</p>
+                </div>
+                <p className='experience-info-section-date'>2021 - now</p>
             </div>
         </div>
     </div>
