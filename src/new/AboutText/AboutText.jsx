@@ -7,7 +7,6 @@ function AboutText({ isVisible, time, text }) {
     const paraRef = useRef();
 
     useMemo(() => {
-        console.log(isVisible);
         if (isVisible) {
             setTimeout(() => {
                 setAnimate('slideUp 1s forwards');
