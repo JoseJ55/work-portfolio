@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-#skills p {
+#skills-title {
     font-family: var(--font-text);
     font-size: 1.8rem;
     color: var(--secondary-color);
@@ -19,104 +19,26 @@
     position: relative;
 }
 
-.skills-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
+#skills-text {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-}
-
-#skill1 {
-    left: 10%;
-    top: 25%;
-    color: #61DBFB;
-}
-
-#skill2 {
-    left: 30%;
-    top: 10%;
-    color: #F0DB4F
-}
-
-#skill3 {
-    right: 30%;
-    top: 5%;
-    color: #4B8BBE;
-}
-
-#skill4 {
-    left: 5%;
-    bottom: 15%;
-    color: #4DB33D;
-}
-
-#skill5 {
-    left: 25%;
     top: 50%;
-    color: #FFA611;
-}
-
-#skill6 {
-    right: 15%;
-    bottom: 20%;
-    color: #764ABC
-}
-
-#skill7 {
-    right: 20%;
-    bottom: 35%;
-    color: #092E20
-}
-
-#skill8 {
-    right: 45%;
-    bottom: 40%;
-    color: #2965f1
-}
-
-#skill9 {
-    right: 50%;
-    bottom: 55%;
-    color: #68A063
-}
-
-#skill10 {
-    right: 30%;
-    top: 30%;
-    color: #0080FF
-}
-
-#skill11 {
     left: 50%;
-    bottom: 10%;
-    color: #0db7ed;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    color: var(--third-color);
+    font-family: var(--text-font);
+    font-size: 7rem;
+    opacity: 0;
 }
 
-#skill12 {
-    left: 10%;
-    bottom: 30%;
-    color: #F06529
-}
-
-#skill13 {
-    left: 30%;
-    bottom: 15%;
-    color: #171515
-}
-
-#skill14 {
-    right: 15%;
-    top: 20%;
-    color: #00758F
-}
-
-#skill15 {
-    left: 10%;
-    top: 5%;
-    color: white
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
