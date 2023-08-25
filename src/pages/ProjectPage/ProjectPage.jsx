@@ -35,14 +35,24 @@ function ProjectPage() {
           <p id='project-page-container-head-title'>{current.title}</p>
 
           <div id='project-page-container-head-link'>
-            <a href={current?.links?.github}><AiFillGithub className="project-icon"/></a>
-            <a href={current?.links?.live}><CgWebsite className="project-icon"/></a>
+            <a 
+            target="_blank"
+            rel='noopener noreferrer'
+            href={current?.links?.github}>
+              <AiFillGithub className="project-icon"/>
+            </a>
+            <a 
+            target="_blank"
+            rel='noopener noreferrer'
+            href={current?.links?.live}>
+              <CgWebsite className="project-icon"/>
+            </a>
           </div>
         </div>
 
         <p id='project-page-container-desc'>{current.description}</p>
       
-        <ProjectScreens />
+        <ProjectScreens current={current} />
       </div>
     </div>
   )

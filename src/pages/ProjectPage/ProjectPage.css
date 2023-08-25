@@ -22,6 +22,10 @@
     border: none;
 }
 
+#project-page-back:hover {
+    cursor: pointer;
+}
+
 #project-page-container {
     width: 86%;
     height: 88%;
