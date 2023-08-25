@@ -1,5 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './Home.css';
+
+import { useSelector } from 'react-redux';
 
 import Header from '../new/Header/Header';
 import Navbar from '../new/Navbar/Navbar';
@@ -14,23 +16,28 @@ function Home({ offset }) {
     const [projectDetail, setPorjectDetail] = useState({});
     const [popup, setPopup] = useState(false);
 
+    const { show_project } = useSelector((state) => state.projects);
+
     const pagesRef = useRef(null);
 
-  const handleScroll = (e) => {
-    if (!pagesRef.current) return;
-
-    pagesRef.current.scrollTo({
-      left: pagesRef.current.scrollLeft + (e.deltaY * 1.5),
-      behavior: 'smooth',
-      duration: 500
-    });
-  }
-
+    
   useEffect(() => {
+    const handleScroll = (e) => {
+      if (!pagesRef.current) return;
+  
+      if (show_project) return;
+  
+      pagesRef.current.scrollTo({
+        left: pagesRef.current.scrollLeft + (e.deltaY * 1.5),
+        behavior: 'smooth',
+        duration: 500
+      });
+    };
+
     window.addEventListener("wheel", handleScroll);
 
     return () => window.removeEventListener("wheel", handleScroll)
-  }, [])
+  }, [show_project])
 
   return (
     <div id='home'>

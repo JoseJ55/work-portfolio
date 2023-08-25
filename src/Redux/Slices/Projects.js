@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     current_project: 1,
+    show_project: false,
     hover_project: 1,
   all: [
     {
@@ -95,11 +96,14 @@ export const projectsSlice = createSlice({
     },
     set_hover_project: (state, action) => {
         state.hover_project = action.payload;
+    },
+    set_show_project: (state, action) => {
+        state.show_project = action.payload;
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { set_current_project, set_hover_project } = projectsSlice.actions;
+export const { set_current_project, set_hover_project, set_show_project } = projectsSlice.actions;
 
 export default projectsSlice.reducer;

@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import './ProjectTabs.css';
 
 import { useDispatch } from 'react-redux';
-import { set_current_project, set_hover_project } from '../../Redux/Slices/Projects';
+import { set_current_project, set_hover_project, set_show_project } from '../../Redux/Slices/Projects';
 
 function ProjectTabs({ data }) {
     const dispatch = useDispatch();
@@ -29,7 +29,10 @@ function ProjectTabs({ data }) {
         className='projects-tab' 
         onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
-        onClick={() => dispatch(set_current_project(data.id))}>
+        onClick={() => {
+            dispatch(set_current_project(data.id));
+            dispatch(set_show_project(true));
+        }}>
             {data.title}
         </button>
     </div>

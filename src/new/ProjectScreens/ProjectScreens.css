@@ -1,0 +1,98 @@
+#projectScreens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    flex: 1;
+    padding: 0 10%;
+    overflow: hidden;
+    z-index: 12;
+}
+
+#projectScreens-pc {
+    width: 65%;
+    height: 90%;
+    position: relative;
+    z-index: 12;
+}
+
+#projectScreens-pc-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 13;
+}
+
+#projectScreens-pc-contain {
+    width: 75%;
+    height: 80%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    z-index: 14;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+#projectScreens-pc-contain::-webkit-scrollbar {
+    width: 5px;
+}
+
+#projectScreens-pc-contain::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+#projectScreens-pc-contain::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+#projectScreens-pc-contain-image {
+    width: 100%;
+    min-height: 100%;
+}
+
+#projectScreens-mobile {
+    width: 20%;
+    height: 90%;
+    position: relative;
+    z-index: 12;
+}
+
+#projectScreens-mobile-frame {
+    width: 100%;
+    height: 100%;
+    z-index: 14;
+}
+
+#projectScreens-mobile-contain {
+    width: 86%;
+    height: 94%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 13;
+    overflow: auto;
+    border-radius: 20px;
+}
+
+#projectScreens-mobile-contain::-webkit-scrollbar {
+    width: 1px;
+}
+
+#projectScreens-mobile-contain::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+#projectScreens-mobile-contain::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    opacity: .6;
+}
+
+#projectScreens-mobile-contain-image {
+    width: 100%;
+    min-height: 100%;
+}
