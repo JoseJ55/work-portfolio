@@ -26,6 +26,8 @@ function Home({ offset }) {
       if (!pagesRef.current) return;
   
       if (show_project) return;
+
+      if (window.innerWidth < window.innerHeight) return;
   
       pagesRef.current.scrollTo({
         left: pagesRef.current.scrollLeft + (e.deltaY * 1.5),
@@ -44,12 +46,12 @@ function Home({ offset }) {
         <Navbar />
         <div id='pages' ref={pagesRef}>
           <Header />
-          <Projects />
+          {/* <Projects />
           <About />
           <Skills />
           <Experience />
           <Contact />
-          <Footer />
+          <Footer /> */}
         </div>
     </div>
   )

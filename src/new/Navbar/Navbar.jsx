@@ -2,10 +2,32 @@ import React from 'react';
 import './Navbar.css';
 
 import { HiOutlineMail } from 'react-icons/hi';
-import { AiOutlineLinkedin } from 'react-icons/ai';
+import { AiOutlineLinkedin, AiOutlineClose } from 'react-icons/ai';
 import { FiGithub } from 'react-icons/fi';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 function Navbar() {
+
+    const handleClose = (e) => {
+        // Close the navbar
+        let closeIcon = document.getElementById('navbar-close');
+        let openIcon = document.getElementById('navbar-open');
+        e.preventDefault();
+
+        closeIcon.style.display = 'flex';
+        openIcon.style.display = 'none';
+    }
+
+    const handleOpen = (e) => {
+        // Open the navbar
+        let closeIcon = document.getElementById('navbar-close');
+        let openIcon = document.getElementById('navbar-open');
+        e.preventDefault();
+
+        closeIcon.style.display = 'none';
+        openIcon.style.display = 'flex';
+    }
+
   return (
     <div id='navbar'>
         <div id='navbar-links'>
@@ -60,6 +82,33 @@ function Navbar() {
             <a target='_blank' rel='noreferrer' href='https://github.com/JoseJ55'>
                 <FiGithub className='link-icon' />
             </a>
+        </div>
+
+        {/* This is for mobile navbar */}
+        <div id='navbar-close'>
+            <GiHamburgerMenu id='navbar-close-icon' onClick={handleOpen} />
+        </div>
+
+        <div id='navbar-open'>
+            <AiOutlineClose id='navbar-open-icon' onClick={handleClose} />
+
+            <div id='navbar-open-items'>
+                <div className='navbar-open-item'>
+                    <p>Home</p>
+                </div>
+                <div className='navbar-open-items-border'></div>
+                <div className='navbar-open-item'>
+                    <p>Projects</p>
+                </div>
+                <div className='navbar-open-items-border'></div>
+                <div className='navbar-open-item'>
+                    <p>About</p>
+                </div>
+                <div className='navbar-open-items-border'></div>
+                <div className='navbar-open-item'>
+                    <p>Contact</p>
+                </div>
+            </div>
         </div>
     </div>
   )
