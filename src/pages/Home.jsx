@@ -46,12 +46,12 @@ function Home({ offset }) {
         <Navbar />
         <div id='pages' ref={pagesRef}>
           <Header />
-          {/* <Projects />
-          <About />
-          <Skills />
-          <Experience />
-          <Contact />
-          <Footer /> */}
+          <Projects />
+          {/* <About /> */}
+          {/* <Skills /> */}
+          {/* <Experience /> */}
+          {/* <Contact /> */}
+          {/* <Footer /> */}
         </div>
     </div>
   )

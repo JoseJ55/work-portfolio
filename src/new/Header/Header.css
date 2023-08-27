@@ -107,6 +107,41 @@
     animation: iconForward 2s infinite;
 }
 
+@media screen and (max-width: 500px) {
+    #header-back-first {
+        width: 45px;
+        height: 45px;
+        top: 13%;
+        left: 20%;
+    }
+    #header-back-second {
+        width: 40px;
+        height: 40px;
+        bottom: 15%;
+        left: 18%;
+    }
+    #header-back-third {
+        width: 55px;
+        height: 55px;
+        top: 17%;
+        right: 20%;
+    }
+    #header p {
+        font-size: 70px;
+        text-shadow: 3px 2px var(--third-color);
+    }
+    #header-action {
+        right: 45%;
+        top: 90%;
+        transform: rotate(90deg);
+        width: 40px;
+        height: 40px;
+    }
+    .header-action-icon {
+        font-size: 18px;
+    }
+}
+
 @keyframes iconForward {
     0% {
         left: 60%;

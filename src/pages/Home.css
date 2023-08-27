@@ -19,7 +19,9 @@
         overflow: hidden;
         width: 100%;
     }
-    #page {
-        height: 90%;
+    #pages {
+        min-height: 100%;
+        overflow: auto;
+        flex-direction: column;
     }
 }
