@@ -4,3 +4,9 @@
     height: 70%;
     background-color: var(--text-color);
 }
+
+@media screen and (max-width: 500px) {
+    #project-images {
+        display: none;
+    }
+}
