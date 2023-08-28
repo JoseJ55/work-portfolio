@@ -55,3 +55,39 @@
     height: 0.5%;
     background-color: var(--third-color);
 }
+
+@media screen and (max-width: 500px) {
+    #experience {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        margin: 20% 0;
+    }
+    #experience-title {
+        transform: rotate(0);
+        margin-bottom: 10%;
+    }
+    #experience-info {
+        width: 80%;
+    }
+    .experience-info-section {
+        font-size: 1.1rem;
+        justify-content: flex-start;
+    }
+    .experience-info-section-title {
+        display: flex;
+        width: 65%;
+        align-items: center;
+    }
+    .experience-info-section-title-icon {
+        margin-right: 4%;
+        font-size: 1.8rem;
+    }
+    .experience-info-section-date {
+        width: 35%;
+        text-align: end;
+    }
+    .experience-info-break {
+        padding: 0.25% 0;
+    }
+}
