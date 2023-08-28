@@ -43,3 +43,21 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media screen and (max-width: 500px) {
+    #footer {
+        width: 100%;
+        min-height: 25%;
+    }
+    #footer-shape {
+        width: 100%;
+        min-height: 200%;
+        bottom: 100%;
+        left: 0%;
+        transform: translate(0%, 0%);
+    }
+    #footer-text {
+        font-size: 1.2rem;
+        margin-bottom: 5%;
+    }
+}
