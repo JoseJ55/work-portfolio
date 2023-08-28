@@ -48,7 +48,7 @@ function Home({ offset }) {
           <Header />
           <Projects />
           <About />
-          {/* <Skills /> */}
+          <Skills />
           {/* <Experience /> */}
           {/* <Contact /> */}
           {/* <Footer /> */}

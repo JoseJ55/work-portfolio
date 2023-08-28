@@ -42,3 +42,22 @@
         opacity: 0;
     }
 }
+
+@media screen and (max-width: 500px) {
+    #skills {
+        width: 100%;
+        flex-direction: column;
+        margin: 20% 0;
+    }
+    #skills-title {
+        font-size: 1.8rem;
+        transform: rotate(0);
+    }
+    #skills-icons {
+        width: 90%;
+        height: 70vh;
+    }
+    #skills-text {
+        font-size: 3.5rem;
+    }
+}
