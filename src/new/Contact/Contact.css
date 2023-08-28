@@ -97,3 +97,35 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 500px) {
+    #contact {
+        width: 100%;
+        min-width: auto;
+        height: auto;
+        margin: 20% 0;
+    }
+    #contact-image {
+        display: none;
+    }
+    #contact-form {
+        width: 90%;
+        height: auto;
+    }
+    #contact-form-title {
+        width: 70%;
+        font-size: 2.5rem;
+        text-shadow: 3px 1.5px var(--third-color);
+        text-align: center;
+    }
+    .contact-input {
+        width: 90%;
+        height: auto;
+        padding: 3% 2%;
+    }
+    #contact-button {
+        width: 90%;
+        padding: 2% 0;
+        margin-top: 5%;
+    }
+}

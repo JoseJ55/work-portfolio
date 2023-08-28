@@ -50,7 +50,7 @@ function Home({ offset }) {
           <About />
           <Skills />
           <Experience />
-          {/* <Contact /> */}
+          <Contact />
           {/* <Footer /> */}
         </div>
     </div>
