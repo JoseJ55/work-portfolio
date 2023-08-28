@@ -9,8 +9,12 @@ function AboutText({ isVisible, time, text }) {
     useMemo(() => {
         if (isVisible) {
             setTimeout(() => {
+                if (window.innerWidth < window.innerHeight) {
+                    setAnimate('fadeIn 1s forwards');
+                    return;
+                }
                 setAnimate('slideUp 1s forwards');
-            }, 1000 * time);
+            }, 500 * time);
         }
     }, [isVisible, time])
 

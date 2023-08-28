@@ -59,7 +59,7 @@
 @media screen and (max-width: 500px) {
     .tabs {
         width: 100%;
-        min-height: 6%;
+        height: 10%;
         margin-top: 10%;
     }
     .tab-icons {

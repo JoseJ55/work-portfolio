@@ -73,12 +73,11 @@
     #projects {
         flex-direction: column;
         height: fit-content;
-        min-height: 100%;
         width: 100%;
     }
     #project-title {
         width: 100%;
-        min-height: 25%;
+        padding: 25% 0;
         position: relative;
     }
     #project-title-shape {
@@ -86,6 +85,8 @@
         top: 50%;
         left: -50%;
         transform: translate(50%, -50%);
+        min-height: 100%;
+        width: 100%;
     }
     #project-title-text {
         top: 50%;
@@ -99,8 +100,7 @@
     #projects-tabs {
         width: 90%;
         height: fit-content;
-        min-height: 100%;
-        margin: 20% 0;
+        padding: 20% 0;
         justify-content: flex-start;
     }
     .projects-tabs-image {

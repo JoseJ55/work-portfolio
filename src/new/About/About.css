@@ -42,3 +42,29 @@
     align-items: center;
     flex-direction: column;
 }
+
+@media screen and (max-width: 500px) {
+    #about {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 20%;
+    }
+    #about-profile {
+        width: 100%;
+        flex-direction: column-reverse;
+        padding: 20% 0;
+    }
+    #about-profile-image {
+        margin-bottom: 0%;
+        margin-top: 5%;
+    }
+    #about-profile-name p {
+        font-size: 2.3rem;
+    }
+    #about-desc {
+        width: 70%;
+        height: auto;
+        margin-left: 0;
+    }
+}

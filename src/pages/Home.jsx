@@ -47,7 +47,7 @@ function Home({ offset }) {
         <div id='pages' ref={pagesRef}>
           <Header />
           <Projects />
-          {/* <About /> */}
+          <About />
           {/* <Skills /> */}
           {/* <Experience /> */}
           {/* <Contact /> */}
