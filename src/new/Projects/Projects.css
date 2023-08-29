@@ -1,13 +1,14 @@
 #projects {
     height: 100%;
-    min-width: 100%;
+    width: fit-content;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex: 1;
 }
 
 #project-title {
-    min-width: 25%;
+    width: 25%;
     height: 100%;
     position: relative;
 }
@@ -31,6 +32,8 @@
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
+    width: fit-content;
+    text-align: center;
 }
 
 #project-title-text p {
@@ -38,10 +41,12 @@
     font-size: 1.7rem;
     color: var(--text-color);
     transform: rotate(-90deg);
+    width: 100%;
+    white-space: nowrap;
 }
 
 #projects-tabs {
-    width: 25%;
+    width: 100%;
     height: 70%;
     display: flex;
     justify-content: center;
@@ -52,7 +57,7 @@
 .projects-tabs-break {
     background-color: var(--third-color);
     width: 100%;
-    padding: 0.25%;
+    padding: 0.5px 0;
 }
 
 .projects-tabs-image {
@@ -109,5 +114,57 @@
         width: 80%;
         height: 70%;
         background-color: var(--text-color);
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    #project-title {
+        min-width: 175px;
+        max-width: 175px;
+    }
+    #projects-tabs {
+        min-width: 250px;
+        max-width: 250px;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+    #project-title {
+        min-width: 200px;
+        max-width: 250px;
+    }
+    #projects-tabs {
+        min-width: 300px;
+        max-width: 325px;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+    #project-title {
+        min-width: 225px;
+        max-width: 300px;
+    }
+    #projects-tabs {
+        min-width: 300px;
+        max-width: 500px;
+    }
+    .projects-tabs-break {
+        min-width: 300px;
+        max-width: 350px;
+    }
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2500px) {
+    #project-title {
+        min-width: 250px;
+        max-width: 300px;
+    }
+    #projects-tabs {
+        min-width: 310px;
+        max-width: 500px;
+    }
+    .projects-tabs-break {
+        min-width: 310px;
+        max-width: 350px;
     }
 }

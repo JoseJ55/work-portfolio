@@ -93,19 +93,49 @@ function Navbar() {
             <AiOutlineClose id='navbar-open-icon' onClick={handleClose} />
 
             <div id='navbar-open-items'>
-                <div className='navbar-open-item'>
+                <div className='navbar-open-item' onClick={e => {
+                    let home = document.getElementById("home");
+                    let header = document.getElementById("header");
+                    e.preventDefault();
+                    home && header.scrollIntoView({ behavior: "smooth", block: "start"});
+                    handleClose(e);
+                }}>
                     <p>Home</p>
                 </div>
+
                 <div className='navbar-open-items-border'></div>
-                <div className='navbar-open-item'>
+
+                <div className='navbar-open-item' onClick={e => {
+                    let home = document.getElementById("home");
+                    let projects = document.getElementById("projects");
+                    e.preventDefault();
+                    home && projects.scrollIntoView({ behavior: "smooth", block: "start"});
+                    handleClose(e);
+                }}>
                     <p>Projects</p>
                 </div>
+
                 <div className='navbar-open-items-border'></div>
-                <div className='navbar-open-item'>
+
+                <div className='navbar-open-item' onClick={e => {
+                    let home = document.getElementById("home");
+                    let about = document.getElementById("about");
+                    e.preventDefault();
+                    home && about.scrollIntoView({ behavior: "smooth", block: "start"});
+                    handleClose(e);
+                }}>
                     <p>About</p>
                 </div>
+
                 <div className='navbar-open-items-border'></div>
-                <div className='navbar-open-item'>
+
+                <div className='navbar-open-item' onClick={e => {
+                    let home = document.getElementById("home");
+                    let contact = document.getElementById("contact");
+                    e.preventDefault();
+                    home && contact.scrollIntoView({ behavior: "smooth", block: "start"});
+                    handleClose(e);
+                }}>
                     <p>Contact</p>
                 </div>
             </div>

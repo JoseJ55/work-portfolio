@@ -13,8 +13,16 @@ function Icon({ icon, width, height }) {
     const [place, setPlace] = useState({ width: 0, height: 0 })
 
     const genRandom = useCallback(() => {
-        let x = Math.floor(Math.random() * (width - (width * 0.1)));
-        let y = Math.floor(Math.random() * (height - (height * 0.1)));
+        let x;
+        let y;
+
+        if (window.innerWidth < window.innerHeight) {
+            x = Math.floor(Math.random() * (width - (width * 0.2)));
+            y = Math.floor(Math.random() * (height - (height * 0.2)));
+        } else {
+            x = Math.floor(Math.random() * (width - (width * 0.1)));
+            y = Math.floor(Math.random() * (height - (height * 0.1)));
+        }
 
         setPlace({
             width: x,

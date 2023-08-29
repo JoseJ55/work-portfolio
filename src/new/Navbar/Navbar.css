@@ -148,3 +148,18 @@
         background-color: var(--third-color);
     }
 }
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+    #navbar-links {
+        width: 90%;
+    }
+    .navbar-link {
+        margin-right: 5px;
+        width: 100%;
+        max-width: 70px;
+        height: 100%;
+    }
+    .navbar-link p {
+        font-size: 1.1rem;
+    }
+}

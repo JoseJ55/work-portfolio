@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Home.css';
 
 import { useSelector } from 'react-redux';
@@ -12,9 +12,7 @@ import Experience from '../new/Experience/Experience';
 import Contact from '../new/Contact/Contact';
 import Footer from '../new/Footer/Footer';
 
-function Home({ offset }) {
-    const [projectDetail, setPorjectDetail] = useState({});
-    const [popup, setPopup] = useState(false);
+function Home() {
 
     const { show_project } = useSelector((state) => state.projects);
 
@@ -27,7 +25,7 @@ function Home({ offset }) {
   
       if (show_project) return;
 
-      if (window.innerWidth < window.innerHeight) return;
+      if (window.innerWidth < 500) return;
   
       pagesRef.current.scrollTo({
         left: pagesRef.current.scrollLeft + (e.deltaY * 1.5),
@@ -45,13 +43,13 @@ function Home({ offset }) {
     <div id='home'>
         <Navbar />
         <div id='pages' ref={pagesRef}>
-          <Header />
+          {/* <Header /> */}
           <Projects />
-          <About />
-          <Skills />
-          <Experience />
-          <Contact />
-          <Footer />
+          {/* <About /> */}
+          {/* <Skills /> */}
+          {/* <Experience /> */}
+          {/* <Contact /> */}
+          {/* <Footer /> */}
         </div>
     </div>
   )

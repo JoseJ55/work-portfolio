@@ -1,6 +1,7 @@
 #project-images {
     margin-left: 10%;
-    width: 40%;
+    width: 100%;
+    min-width: 500px;
     height: 70%;
     background-color: var(--text-color);
 }
@@ -8,5 +9,40 @@
 @media screen and (max-width: 500px) {
     #project-images {
         display: none;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    #project-images {
+        height: 65%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    #project-images {
+        min-width: 550px;
+        max-width: 550px;
+        height: 70%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+    #project-images {
+        min-width: 575px;
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+    #project-images {
+        min-width: 600px;
+        max-width: 650px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    #project-images {
+        min-width: 700px;
+        max-width: 750px;
     }
 }

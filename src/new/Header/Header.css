@@ -142,6 +142,33 @@
     }
 }
 
+@media screen and (min-width: 500px) and (max-width: 600px) {
+    #header-back-first {
+        width: 40px;
+        height: 40px;
+        top: 11%;
+        left: 18%;
+    }
+    #header-back-second {
+        width: 40px;
+        height: 40px;
+        bottom: 13%;
+        left: 15%;
+    }
+    #header-back-third {
+        width: 55px;
+        height: 55px;
+        top: 15%;
+        right: 18%;
+    }
+    #header p {
+        font-size: 68px;
+        text-shadow: 3px 2px var(--third-color);
+    }
+}
+
+
+/* --------------------- Animations ------------------------- */
 @keyframes iconForward {
     0% {
         left: 60%;
