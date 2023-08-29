@@ -1,9 +1,10 @@
 #contact {
-    min-width: 100%;
+    width: fit-content;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 20%;
 }
 
 #contact-image {
@@ -128,5 +129,89 @@
         width: 90%;
         padding: 2% 0;
         margin-top: 5%;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    #contact-image {
+        min-width: 250px;
+        max-width: 250px;
+        border-radius: 5px;
+        height: 70%;
+    }
+    #contact-form {
+        min-width: 300px;
+        max-width: 350px;
+        margin-left: 10%;
+        height: 70%;
+    }
+    .contact-input {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    #contact-button {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+    #contact-image {
+        min-width: 275px;
+        max-width: 275px;
+        border-radius: 5px;
+        height: 75%;
+    }
+    #contact-form {
+        min-width: 350px;
+        max-width: 350px;
+        margin-left: 12%;
+        height: 75%;
+    }
+    .contact-input {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    #contact-button {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+    #contact-image {
+        min-width: 300px;
+        max-width: 300px;
+        border-radius: 6px;
+    }
+    #contact-form {
+        min-width: 375px;
+        max-width: 375px;
+        margin-left: 13%;
+    }
+    .contact-input {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    #contact-button {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    #contact-image {
+        min-width: 330px;
+        max-width: 330px;
+        border-radius: 6px;
+    }
+    #contact-form {
+        min-width: 400px;
+        max-width: 400px;
+        margin-left: 15%;
+    }
+    .contact-input {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    #contact-button {
+        width: 100%;
     }
 }

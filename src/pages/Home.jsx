@@ -47,8 +47,8 @@ function Home() {
           {/* <Projects /> */}
           {/* <About /> */}
           {/* <Skills /> */}
-          <Experience />
-          {/* <Contact /> */}
+          {/* <Experience /> */}
+          <Contact />
           {/* <Footer /> */}
         </div>
     </div>
