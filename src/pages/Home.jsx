@@ -46,8 +46,8 @@ function Home() {
           {/* <Header /> */}
           {/* <Projects /> */}
           {/* <About /> */}
-          <Skills />
-          {/* <Experience /> */}
+          {/* <Skills /> */}
+          <Experience />
           {/* <Contact /> */}
           {/* <Footer /> */}
         </div>

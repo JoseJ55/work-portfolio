@@ -76,6 +76,14 @@
     color: var(--secondary-color);
 }
 
+#navbar-close {
+    display: none;
+}
+
+#navbar-open {
+    display: none;
+}
+
 @keyframes slideDown {
     0% {
         top: -50%;
