@@ -44,8 +44,8 @@ function Home() {
         <Navbar />
         <div id='pages' ref={pagesRef}>
           {/* <Header /> */}
-          <Projects />
-          {/* <About /> */}
+          {/* <Projects /> */}
+          <About />
           {/* <Skills /> */}
           {/* <Experience /> */}
           {/* <Contact /> */}
