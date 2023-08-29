@@ -45,8 +45,8 @@ function Home() {
         <div id='pages' ref={pagesRef}>
           {/* <Header /> */}
           {/* <Projects /> */}
-          <About />
-          {/* <Skills /> */}
+          {/* <About /> */}
+          <Skills />
           {/* <Experience /> */}
           {/* <Contact /> */}
           {/* <Footer /> */}
