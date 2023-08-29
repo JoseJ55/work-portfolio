@@ -77,3 +77,96 @@
     font-size: 1.1rem;
     padding: 1% 0;
 }
+
+@media screen and (max-width: 500px) {
+    #project-page-container {
+        width: 80%;
+        height: 100%;
+        min-height: 70%;
+        max-height: 70%;
+        overflow-y: scroll;
+    }
+    #project-page-container-head {
+        width: 98%;
+        padding: 5% 1%;
+        flex-direction: column;
+    }
+    #project-page-container-head-link {
+        margin-top: 5%;
+    }
+    #project-page-container-desc {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+    #project-page-container {
+        width: 70%;
+        height: 90%;
+        min-height: 70%;
+        max-height: 70%;
+        overflow-y: auto;
+    }
+    #project-page-container-head {
+        width: 95%;
+        padding: 5% 1%;
+    }
+    #project-page-container-desc {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    #project-page-container {
+        width: 80%;
+        height: 90%;
+        min-height: 60%;
+        max-height: 60%;
+        overflow: hidden;
+    }
+    #project-page-container-head {
+        width: 90%;
+        padding: 3% 1%;
+    }
+    #project-page-container-desc {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+    #project-page-container {
+        width: 80%;
+        height: 100%;
+        min-height: 60%;
+        max-height: 60%;
+        overflow: hidden;
+    }
+    #project-page-container-head {
+        width: 90%;
+        padding: 2% 1%;
+    }
+    #project-page-container-desc {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #project-page-container {
+        width: 70%;
+        max-width: 1240px;
+        height: 100%;
+        min-height: 60%;
+        max-height: 60%;
+        overflow: hidden;
+    }
+    #project-page-container-head {
+        width: 90%;
+        padding: 2% 1%;
+    }
+    .project-icon {
+        font-size: 1.7rem;
+    }
+    #project-page-container-desc {
+        font-size: 1rem;
+    }
+}
