@@ -71,9 +71,6 @@
 }
 
 @media screen and (min-width: 500px) and (max-width: 1000px) {
-    #about {
-        margin: 0 15%;
-    }
     #about-profile {
         min-width: 250px;
         max-width: 275px;
@@ -111,6 +108,9 @@
 }
 
 @media screen and (min-width: 1500px) and (max-width: 2000px) {
+    #about {
+        margin: 0 25%;
+    }
     #about-profile {
         min-width: 285px;
         max-width: 310px;
@@ -131,7 +131,7 @@
 
 @media screen and (min-width: 2000px) {
     #about {
-        margin: 0 12%;
+        margin: 0 30%;
     }
     #about-profile {
         min-width: 300px;

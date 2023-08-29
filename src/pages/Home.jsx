@@ -43,13 +43,13 @@ function Home() {
     <div id='home'>
         <Navbar />
         <div id='pages' ref={pagesRef}>
-          {/* <Header /> */}
-          {/* <Projects /> */}
-          {/* <About /> */}
-          {/* <Skills /> */}
-          {/* <Experience /> */}
+          <Header />
+          <Projects />
+          <About />
+          <Skills />
+          <Experience />
           <Contact />
-          {/* <Footer /> */}
+          <Footer />
         </div>
     </div>
   )
