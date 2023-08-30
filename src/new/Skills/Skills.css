@@ -63,7 +63,7 @@
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1000px) {
+@media screen and (min-width: 500px) and (max-width: 750px) {
     #skills-title {
         width: 100px;
         text-align: center;
@@ -71,31 +71,31 @@
     }
     #skills-icons {
         width: 500px;
-        height: 70%;
+        height: 60%;
         position: relative;
     }
     #skills-text {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1500px) {
+@media screen and (min-width: 750px) and (max-width: 1000px) {
     #skills-title {
         width: 100px;
         text-align: center;
         white-space: nowrap;
     }
     #skills-icons {
-        width: 550px;
-        height: 75%;
+        width: 600px;
+        height: 60%;
         position: relative;
     }
     #skills-text {
-        font-size: 5.5rem;
+        font-size: 4.8rem;
     }
 }
 
-@media screen and (min-width: 1500px) and (max-width: 2000px) {
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
     #skills-title {
         width: 100px;
         text-align: center;
@@ -103,7 +103,54 @@
     }
     #skills-icons {
         width: 700px;
-        height: 75%;
+        height: 65%;
+        position: relative;
+    }
+    #skills-text {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+    #skills-title {
+        width: 100px;
+        text-align: center;
+        white-space: nowrap;
+    }
+    #skills-icons {
+        width: 800px;
+        height: 70%;
+        position: relative;
+    }
+    #skills-text {
+        font-size: 5.3rem;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1700px) {
+    #skills-title {
+        width: 100px;
+        text-align: center;
+        white-space: nowrap;
+    }
+    #skills-icons {
+        width: 950px;
+        height: 65%;
+    }
+    #skills-text {
+        font-size: 5.5rem;
+    }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 2000px) {
+    #skills-title {
+        width: 100px;
+        text-align: center;
+        white-space: nowrap;
+    }
+    #skills-icons {
+        width: 1000px;
+        height: 70%;
     }
     #skills-text {
         font-size: 6rem;
@@ -117,8 +164,8 @@
         white-space: nowrap;
     }
     #skills-icons {
-        width: 800px;
-        height: 75%;
+        width: 1200px;
+        height: 65%;
     }
     #skills-text {
         font-size: 6.5rem;

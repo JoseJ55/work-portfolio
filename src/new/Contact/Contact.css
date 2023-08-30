@@ -132,59 +132,137 @@
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1000px) {
+@media screen and (min-width: 500px) and (max-width: 750px) {
     #contact-image {
-        min-width: 250px;
-        max-width: 250px;
-        border-radius: 5px;
-        height: 70%;
+        min-width: 260px;
+        max-width: 260px;
+        border-radius: 4px;
+        height: 55%;
     }
     #contact-form {
-        min-width: 300px;
-        max-width: 350px;
+        min-width: 360px;
+        max-width: 360px;
         margin-left: 10%;
-        height: 70%;
+        height: 55%;
+    }
+    #contact-form-title {
+        font-size: 1.6rem;
+    }
+    .contact-input {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+    #contact-button {
+        width: 90%;
+        height: 8%;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+    #contact-image {
+        min-width: 300px;
+        max-width: 300px;
+        border-radius: 5px;
+        height: 60%;
+    }
+    #contact-form {
+        min-width: 320px;
+        max-width: 320px;
+        margin-left: 8%;
+        height: 60%;
     }
     .contact-input {
         width: 100%;
         font-size: 1.2rem;
     }
     #contact-button {
-        width: 95%;
+        width: 90%;
+        height: 8%;
+        font-size: 1.1rem;
     }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1500px) {
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
     #contact-image {
-        min-width: 275px;
-        max-width: 275px;
+        min-width: 320px;
+        max-width: 320px;
         border-radius: 5px;
-        height: 75%;
+        height: 60%;
     }
     #contact-form {
         min-width: 350px;
         max-width: 350px;
-        margin-left: 12%;
-        height: 75%;
+        margin-left: 13%;
+        height: 60%;
+    }
+    .contact-input {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+    #contact-button {
+        width: 90%;
+        height: 9%;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+    #contact-image {
+        min-width: 350px;
+        max-width: 350px;
+        border-radius: 5px;
+        height: 65%;
+    }
+    #contact-form {
+        min-width: 375px;
+        max-width: 375px;
+        margin-left: 15%;
+        height: 65%;
     }
     .contact-input {
         width: 100%;
         font-size: 1.2rem;
     }
     #contact-button {
-        width: 95%;
+        width: 90%;
+        height: 9%;
+        font-size: 1.4rem;
     }
 }
 
-@media screen and (min-width: 1500px) and (max-width: 2000px) {
+@media screen and (min-width: 1500px) and (max-width: 1700px) {
     #contact-image {
-        min-width: 300px;
-        max-width: 300px;
-        border-radius: 6px;
+        min-width: 400px;
+        max-width: 400px;
+        border-radius: 5px;
+        height: 70%;
     }
     #contact-form {
-        min-width: 375px;
-        max-width: 375px;
+        min-width: 450px;
+        max-width: 450px;
+        margin-left: 12%;
+    }
+    .contact-input {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    #contact-button {
+        width: 90%;
+        height: 8%;
+    }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 2000px) {
+    #contact-image {
+        min-width: 500px;
+        max-width: 500px;
+        border-radius: 6px;
+        height: 70%;
+    }
+    #contact-form {
+        min-width: 500px;
+        max-width: 500px;
         margin-left: 13%;
     }
     .contact-input {
@@ -192,19 +270,21 @@
         font-size: 1.2rem;
     }
     #contact-button {
-        width: 95%;
+        width: 90%;
+        height: 8%;
     }
 }
 
 @media screen and (min-width: 2000px) {
     #contact-image {
-        min-width: 330px;
-        max-width: 330px;
+        min-width: 550px;
+        max-width: 550px;
         border-radius: 6px;
+        height: 65%;
     }
     #contact-form {
-        min-width: 400px;
-        max-width: 400px;
+        min-width: 550px;
+        max-width: 550px;
         margin-left: 15%;
     }
     .contact-input {
@@ -212,6 +292,7 @@
         font-size: 1.2rem;
     }
     #contact-button {
-        width: 100%;
+        width: 90%;
+        height: 8%;
     }
 }

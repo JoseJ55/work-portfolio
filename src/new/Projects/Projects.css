@@ -80,6 +80,7 @@
         flex-direction: column;
         height: fit-content;
         width: 100%;
+        margin: 0;
     }
     #project-title {
         width: 100%;
@@ -118,7 +119,23 @@
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1000px) {
+@media screen and (min-width: 500px) and (max-width: 750px) {
+    #project-title {
+        min-width: 175px;
+        max-width: 175px;
+    }
+    #projects-tabs {
+        min-width: 230px;
+        max-width: 230px;
+        height: 50%;
+    }
+    .projects-tabs-break {
+        min-width: 230px;
+        max-width: 230px;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1000px) {
     #project-title {
         min-width: 175px;
         max-width: 175px;
@@ -126,46 +143,90 @@
     #projects-tabs {
         min-width: 250px;
         max-width: 250px;
+        height: 50%;
     }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1500px) {
-    #project-title {
-        min-width: 200px;
+    .projects-tabs-break {
+        min-width: 250px;
         max-width: 250px;
     }
-    #projects-tabs {
-        min-width: 300px;
-        max-width: 325px;
-    }
 }
 
-@media screen and (min-width: 1500px) and (max-width: 2000px) {
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
     #project-title {
-        min-width: 225px;
-        max-width: 300px;
+        min-width: 180px;
+        max-width: 180px;
     }
     #projects-tabs {
         min-width: 300px;
-        max-width: 500px;
+        max-width: 300px;
+        height: 55%;
     }
     .projects-tabs-break {
         min-width: 300px;
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+    #project-title {
+        min-width: 200px;
+        max-width: 200px;
+    }
+    #projects-tabs {
+        min-width: 350px;
+        max-width: 350px;
+        height: 55%;
+    }
+    .projects-tabs-break {
+        min-width: 350px;
         max-width: 350px;
     }
 }
 
-@media screen and (min-width: 2000px) and (max-width: 2500px) {
+@media screen and (min-width: 1500px) and (max-width: 1700px) {
+    #project-title {
+        min-width: 225px;
+        max-width: 225px;
+    }
+    #projects-tabs {
+        min-width: 400px;
+        max-width: 400px;
+        height: 60%;
+    }
+    .projects-tabs-break {
+        min-width: 400px;
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 2000px) {
+    #project-title {
+        min-width: 225px;
+        max-width: 225px;
+    }
+    #projects-tabs {
+        min-width: 450px;
+        max-width: 450px;
+        height: 60%;
+    }
+    .projects-tabs-break {
+        min-width: 450px;
+        max-width: 450px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
     #project-title {
         min-width: 250px;
         max-width: 300px;
     }
     #projects-tabs {
-        min-width: 310px;
+        min-width: 500px;
         max-width: 500px;
+        height: 60%;
     }
     .projects-tabs-break {
-        min-width: 310px;
-        max-width: 350px;
+        min-width: 500px;
+        max-width: 500px;
     }
 }

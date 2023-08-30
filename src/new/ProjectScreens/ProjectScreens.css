@@ -146,11 +146,12 @@
     }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1500px) {
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
     #projectScreens {
-        width: 90%;
-        min-height: 100%;
+        width: 65%;
+        min-height: 90%;
         align-items: flex-start;
+        padding: 0;
     }
     #projectScreens-pc {
         width: 80%;
@@ -162,7 +163,39 @@
     }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+    #projectScreens {
+        width: 75%;
+        min-height: 100%;
+        align-items: flex-start;
+        padding: 0;
+    }
+    #projectScreens-pc {
+        width: 80%;
+        height: 65%;
+    }
+    #projectScreens-mobile {
+        width: 20%;
+        height: 65%;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+    #projectScreens {
+        width: 85%;
+        padding: 0;
+    }
+    #projectScreens-pc {
+        width: 80%;
+        height: 95%;
+    }
+    #projectScreens-mobile {
+        width: 20%;
+        height: 95%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
     #projectScreens {
         width: 95%;
         height: 100%;

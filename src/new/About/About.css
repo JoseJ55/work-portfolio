@@ -49,7 +49,7 @@
         width: 100%;
         height: auto;
         flex-direction: column;
-        margin-bottom: 20%;
+        margin: 0 0 20% 0;
     }
     #about-profile {
         width: 100%;
@@ -64,56 +64,105 @@
         font-size: 2.3rem;
     }
     #about-desc {
-        width: 70%;
+        width: 80%;
         height: auto;
         margin-left: 0;
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1000px) {
+@media screen and (min-width: 500px) and (max-width: 750px) {
     #about-profile {
-        min-width: 250px;
-        max-width: 275px;
+        min-width: 175px;
+        max-width: 175px;
+        justify-content: center;
     }
     #about-profile-image {
         width: 175px;
         height: 175px;
     }
+    #about-profile-name p {
+        font-size: 1.7rem;
+    }
     #about-desc {
-        min-width: 450px;
+        min-width: 380px;
+        max-width: 380px;
+        margin-left: 9%;
+        margin-bottom: 1%;
+        height: 45%;
     }
 }
 
 @media screen and (min-width: 750px) and (max-width: 1000px) {
+    #about-profile {
+        min-width: 200px;
+        max-width: 200px;
+        justify-content: center;
+    }
+    #about-profile-image {
+        width: 175px;
+        height: 175px;
+    }
+    #about-profile-name p {
+        font-size: 1.6rem;
+    }
+    #about-desc {
+        min-width: 400px;
+        max-width: 400px;
+        margin-left: 6%;
+        margin-bottom: 1%;
+        height: 45%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+    #about-profile {
+        min-width: 250px;
+        max-width: 250px;
+        justify-content: center;
+    }
     #about-profile-image {
         width: 200px;
         height: 200px;
     }
+    #about-profile-name p {
+        font-size: 1.7rem;
+    }
+    #about-desc {
+        min-width: 480px;
+        max-width: 480px;
+        margin-left: 8%;
+        margin-bottom: 1.5%;
+        height: 50%;
+    }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1500px) {
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
     #about-profile {
         min-width: 275px;
-        max-width: 300px;
+        max-width: 275px;
+        justify-content: center;
     }
     #about-profile-image {
         width: 220px;
         height: 220px;
     }
+    #about-profile-name p {
+        font-size: 1.9rem;
+    }
     #about-desc {
         min-width: 500px;
         max-width: 500px;
         margin-left: 10%;
+        margin-bottom: 2%;
+        height: 45%;
     }
 }
 
 @media screen and (min-width: 1500px) and (max-width: 2000px) {
-    #about {
-        margin: 0 25%;
-    }
     #about-profile {
-        min-width: 285px;
+        min-width: 310px;
         max-width: 310px;
+        justify-content: center;
     }
     #about-profile-image {
         width: 250px;
@@ -126,16 +175,18 @@
         min-width: 510px;
         max-width: 510px;
         margin-left: 10%;
+        height: 45%;
     }
 }
 
 @media screen and (min-width: 2000px) {
     #about {
-        margin: 0 30%;
+        margin: 0 20%;
     }
     #about-profile {
-        min-width: 300px;
+        min-width: 320px;
         max-width: 320px;
+        justify-content: center;
     }
     #about-profile-image {
         width: 275px;
@@ -145,8 +196,9 @@
         font-size: 2rem;
     }
     #about-desc {
-        min-width: 530px;
-        max-width: 530px;
+        min-width: 550px;
+        max-width: 550px;
         margin-left: 10%;
+        height: 40%;
     }
 }
