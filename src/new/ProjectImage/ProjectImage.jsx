@@ -14,7 +14,7 @@ function ProjectImage({ data }) {
             return project.id === hover_project;
         });
 
-        setCurrent(temp[0].images[0]);
+        setCurrent(temp[0].coverImage);
     }, [hover_project, data])
 
     // useEffect(() => {

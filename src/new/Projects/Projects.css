@@ -66,6 +66,7 @@
     width: 40%;
     height: 70%;
     background-color: var(--text-color);
+    border-radius: 10px;
 }
 
 .mobile-ony {

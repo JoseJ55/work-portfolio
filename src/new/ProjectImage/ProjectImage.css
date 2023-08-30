@@ -4,6 +4,8 @@
     min-width: 500px;
     height: 70%;
     background-color: var(--text-color);
+    border-radius: 10px;
+    border: 5px solid var(--secondary-color);
 }
 
 @media screen and (max-width: 500px) {

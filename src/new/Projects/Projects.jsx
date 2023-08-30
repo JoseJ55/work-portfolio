@@ -30,7 +30,7 @@ function Projects() {
           dispatch(set_current_project(all[0].id));
           dispatch(set_show_project(true));
         }}
-        src={all[0].images[0]} alt={`Project Sample`} />
+        src={all[0].coverImage} alt={`Project Sample`} />
         <div className='projects-tabs-break'></div>
         
         <ProjectTabs data={all[1]} />
@@ -40,7 +40,7 @@ function Projects() {
           dispatch(set_current_project(all[1].id));
           dispatch(set_show_project(true));
         }} 
-        src={all[1].images[0]} alt={`Project Sample`} />
+        src={all[1].coverImage} alt={`Project Sample`} />
         <div className='projects-tabs-break'></div>
         
         <ProjectTabs data={all[2]} />
@@ -50,7 +50,7 @@ function Projects() {
           dispatch(set_current_project(all[2].id));
           dispatch(set_show_project(true));
         }}
-        src={all[2].images[0]} alt={`Project Sample`} />
+        src={all[2].coverImage} alt={`Project Sample`} />
         <div className='projects-tabs-break'></div>
         
         <ProjectTabs data={all[3]} />
@@ -60,7 +60,7 @@ function Projects() {
           dispatch(set_current_project(all[3].id));
           dispatch(set_show_project(true));
         }}
-        src={all[3].images[0]} alt={`Project Sample`} />
+        src={all[3].coverImage} alt={`Project Sample`} />
         <div className='projects-tabs-break'></div>
         
         <ProjectTabs data={all[4]} />
@@ -70,7 +70,7 @@ function Projects() {
           dispatch(set_current_project(all[4].id));
           dispatch(set_show_project(true));
         }}
-        src={all[4].images[0]} alt={`Project Sample`} />
+        src={all[4].coverImage} alt={`Project Sample`} />
       </div>
 
       <ProjectImage data={all} />
