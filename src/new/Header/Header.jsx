@@ -11,16 +11,16 @@ function Header() {
         <div className='header-back-icon' id='header-back-third'></div>
         
         <div id='header-text'>
-            <p>Hello<span>,</span></p>
+            <p>Hello<span className='colorChange'>,</span></p>
             <p>I am</p>
-            <p><span>Jose</span></p>
+            <p><span className='colorChange'>Jose</span></p>
         </div>
 
         <div id='header-action' onClick={e => {
           let home = document.getElementById("home");
           let projects = document.getElementById("projects");
           e.preventDefault();
-          home && projects.scrollIntoView({ behavior: "smooth", block: "start"});
+          home && projects.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
         }}>
             <div id='header-action-icons'>
                 <MdArrowForwardIos className='header-action-icon' id='icon-back' />

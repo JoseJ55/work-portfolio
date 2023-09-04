@@ -35,7 +35,7 @@ function Navbar() {
                 let home = document.getElementById("home");
                 let header = document.getElementById("header");
                 e.preventDefault();
-                home && header.scrollIntoView({ behavior: "smooth", block: "start"});
+                home && header.scrollIntoView({ behavior: "smooth", block: "start", inline: "start"});
             }}>
                 <p>Home</p>
                 <div className='navbar-link-active'></div>
@@ -45,7 +45,7 @@ function Navbar() {
                 let home = document.getElementById("home");
                 let projects = document.getElementById("projects");
                 e.preventDefault();
-                home && projects.scrollIntoView({ behavior: "smooth", block: "start"});
+                home && projects.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
             }}>
                 <p>Projects</p>
                 <div className='navbar-link-active'></div>
@@ -55,7 +55,7 @@ function Navbar() {
                 let home = document.getElementById("home");
                 let about = document.getElementById("about");
                 e.preventDefault();
-                home && about.scrollIntoView({ behavior: "smooth", block: "start"});
+                home && about.scrollIntoView({ behavior: "smooth", block: "start", inline: "center" });
             }}>
                 <p>About</p>
                 <div className='navbar-link-active'></div>
@@ -65,7 +65,7 @@ function Navbar() {
                 let home = document.getElementById("home");
                 let contact = document.getElementById("contact");
                 e.preventDefault();
-                home && contact.scrollIntoView({ behavior: "smooth", block: "start"});
+                home && contact.scrollIntoView({ behavior: "smooth", block: "start", inline: "start"});
             }}>
                 <p>Contact</p>
                 <div className='navbar-link-active'></div>
