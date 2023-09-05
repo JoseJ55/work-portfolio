@@ -22,7 +22,8 @@ function About() {
   return (
     <div id='about'>
         <div id='about-profile'>
-            <div id='about-profile-image'></div>
+            {/* <div id='about-profile-image'></div> */}
+            <img id='about-profile-image' src='/images/profile-500px.png' alt='profile' />
             <div id='about-profile-name'>
                 <p><span>Jose</span> Jimenez</p>
             </div>

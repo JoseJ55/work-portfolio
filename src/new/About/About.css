@@ -18,10 +18,14 @@
 
 #about-profile-image {
     width: 250px;
-    height: 250px;
+    height: 450px;
     background-color: var(--text-color);
-    border-radius: 50%;
+    border-radius: 10px;
     margin-bottom: 20%;
+    box-shadow: 0px 0px 10px 2px var(--secondary-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #about-profile-name p {
@@ -78,7 +82,7 @@
     }
     #about-profile-image {
         width: 175px;
-        height: 175px;
+        height: 375px;
     }
     #about-profile-name p {
         font-size: 1.7rem;
@@ -99,8 +103,8 @@
         justify-content: center;
     }
     #about-profile-image {
-        width: 175px;
-        height: 175px;
+        width: 190px;
+        height: 375px;
     }
     #about-profile-name p {
         font-size: 1.6rem;
@@ -121,8 +125,8 @@
         justify-content: center;
     }
     #about-profile-image {
-        width: 200px;
-        height: 200px;
+        width: 215px;
+        height: 400px;
     }
     #about-profile-name p {
         font-size: 1.7rem;
@@ -143,8 +147,8 @@
         justify-content: center;
     }
     #about-profile-image {
-        width: 220px;
-        height: 220px;
+        width: 235px;
+        height: 420px;
     }
     #about-profile-name p {
         font-size: 1.9rem;
@@ -165,8 +169,8 @@
         justify-content: center;
     }
     #about-profile-image {
-        width: 250px;
-        height: 250px;
+        width: 275px;
+        height: 450px;
     }
     #about-profile-name p {
         font-size: 2rem;
@@ -189,8 +193,8 @@
         justify-content: center;
     }
     #about-profile-image {
-        width: 275px;
-        height: 275px;
+        width: 300px;
+        height: 475px;
     }
     #about-profile-name p {
         font-size: 2rem;
