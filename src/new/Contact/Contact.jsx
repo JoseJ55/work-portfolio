@@ -3,8 +3,6 @@ import './Contact.css';
 import emailjs from '@emailjs/browser';
 
 function Contact() {
-    // const [animate, setAnimate] = useState(false);
-
     const formRef = useRef();
 
     const handleSubmit = (e) => {
@@ -21,22 +19,9 @@ function Contact() {
         });
     };
 
-    // const observer = useMemo(() => new IntersectionObserver(
-    //   ([entry]) => {
-    //     setAnimate(entry.isIntersecting);
-    //   }
-    // ), []);
-
-    // useEffect(() => {
-    //   observer.observe(formRef.current)
-    //   return () => observer.disconnect()
-    // }, [observer])
-
   return (
     <div id='contact'>
-      <div id='contact-image'>
-
-      </div>
+      {/* <div id='contact-image'></div> */}
 
       <form id='contact-form' ref={formRef} onSubmit={handleSubmit}>
         <label id='contact-form-title'>Let's Craft <span>Brilliance</span> Together</label>
