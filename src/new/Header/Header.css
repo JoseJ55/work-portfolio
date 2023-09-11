@@ -27,16 +27,16 @@
     position: absolute;
     top: 15%;
     left: 25%;
-    animation: floatAbout1 6s infinite;
+    /* animation: floatAbout1 6s infinite; */
 }
 
 #header-back-second {
     width: 55px;
     height: 55px;
     position: absolute;
-    bottom: 20%;
+    top: 80%;
     left: 20%;
-    animation: floatAbout2 6s infinite;
+    /* animation: floatAbout2 6s infinite; */
 }
 
 #header-back-third {
@@ -44,8 +44,8 @@
     height: 70px;
     position: absolute;
     top: 17%;
-    right: 25%;
-    animation: floatAbout3 6s infinite;
+    left: 75%;
+    /* animation: floatAbout3 6s infinite; */
 }
 
 #header-text {
