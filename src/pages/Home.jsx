@@ -14,12 +14,16 @@ import Footer from '../new/Footer/Footer';
 
 function Home() {
 
-    const { show_project } = useSelector((state) => state.projects);
+  const { show_project } = useSelector((state) => state.projects);
 
-    const pagesRef = useRef(null);
+  const pagesRef = useRef(null);
 
-    
+  
   useEffect(() => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
     const handleScroll = (e) => {
       if (!pagesRef.current) return;
   
@@ -34,9 +38,37 @@ function Home() {
       });
     };
 
+    const startDragging = (e) => {
+      isDown = true;
+      startX = e.pageX - pagesRef.current.offsetLeft;
+      scrollLeft = pagesRef.current.scrollLeft;
+    };
+    
+    const stopDragging = () => {
+      isDown = false;
+    };
+    
+    const move = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - pagesRef.current.offsetLeft;
+      const walk = x - startX;
+      pagesRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    pagesRef.current.addEventListener('mousedown', startDragging);
+    pagesRef.current.addEventListener('mousemove', move);
+    pagesRef.current.addEventListener('mouseup', stopDragging);
+    pagesRef.current.addEventListener('mouseleave', stopDragging);
     window.addEventListener("wheel", handleScroll);
 
-    return () => window.removeEventListener("wheel", handleScroll)
+    return () => {
+      pagesRef.current.removeEventListener('mousedown', startDragging);
+      pagesRef.current.removeEventListener('mousemove', move);
+      pagesRef.current.removeEventListener('mouseup', stopDragging);
+      pagesRef.current.removeEventListener('mouseleave', stopDragging);
+      window.removeEventListener("wheel", handleScroll)
+    }
   }, [show_project])
 
   return (
