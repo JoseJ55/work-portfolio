@@ -33,6 +33,22 @@ body {
   height: 100vh;
 }
 
+#cursor {
+  position: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  mix-blend-mode: difference;
+  background-color: transparent;
+  z-index: 1000;
+  border: 30px solid white;
+  height: 0px;
+  width: 0px;
+  transition: all 300ms ease-out;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 15px;
