@@ -4,6 +4,7 @@
 * {
   padding: 0;
   margin: 0;
+  /* cursor: none !important; */
 }
 
 :root {
@@ -20,9 +21,9 @@
 
   /* New Colors */
   --main-color: rgba(0, 4, 17, 1);
-  --secondary-color: rgba(102, 34, 204, 1);
+  --secondary-color: rgba(102, 34, 204, 1); /* #6622cc */
   --third-color: rgba(83, 152, 190, 1);
-  --text-color: rgba(224, 226, 219, 1);
+  --text-color: rgba(224, 226, 219, 1); /* #e0e2db */
   --font-text: 'Inria Sans', Inter;
 }
 
@@ -31,6 +32,25 @@ body {
   /* background-color: red; */
   width: 100vw;
   height: 100vh;
+  position: relative;
+}
+
+#circle {
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  transition: top left 0.4s ease-in-out;
+  pointer-events: none;
+  visibility: hidden;
+  transform: rotate(-90deg) scale(1);
+  transition: transform 0.1s ease-in-out;
+}
+
+.circleTransition {
+  transition: stroke-dashoffset  0.3s ease-out; /* Adjust the duration and easing function as needed */
 }
 
 #cursor {
