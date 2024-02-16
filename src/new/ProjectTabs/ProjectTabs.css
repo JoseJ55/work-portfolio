@@ -25,7 +25,7 @@
 }
 
 .projects-tab:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
     color: var(--third-color);
 }
 

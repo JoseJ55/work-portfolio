@@ -16,7 +16,7 @@
 }
 
 .portfolio_projects-project_image:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
     /* opacity: .9; */
     /* box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.9); */
 }

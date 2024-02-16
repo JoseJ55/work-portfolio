@@ -12,6 +12,7 @@ function App() {
   const circleRef = useRef();
   const appRef = useRef();
   const pagesRef = useRef();
+  const cursorRef = useRef();
 
   const circleSize = 50;
 
@@ -26,6 +27,10 @@ function App() {
         const offset = circleSize / 2;
         circleRef.current.style.top = `${e.pageY -  offset}px`; // Subtract half the size of the circle to center it on the cursor
         circleRef.current.style.left = `${e.pageX -  offset}px`; // Subtract half the size of the circle to center it on the cursor
+
+        // cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`
+        cursorRef.current.style.top = `${e.pageY}px`;
+        cursorRef.current.style.left = `${e.pageX}px`;
       } else {
         // Hide the circle
         circleRef.current.style.visibility = 'hidden';
@@ -69,11 +74,13 @@ function App() {
       startX = e.pageX - pagesRef.current.offsetLeft;
       scrollLeft = pagesRef.current.scrollLeft;
       circleRef.current.style.transform = 'rotate(-90deg) scale(1.2)';
+      cursorRef.current.style.backgroundColor = 'var(--secondary-color-fade)';
     };
     
     const stopDragging = () => {
       isDown = false;
       circleRef.current.style.transform = 'rotate(-90deg) scale(1)';
+      cursorRef.current.style.backgroundColor = 'var(--secondary-color)';
     };
     
     const move = (e) => {
@@ -109,12 +116,12 @@ function App() {
 
   return (
     <div className="App" ref={appRef} >
-      <div id="cursor"></div>
 
       <svg id='circle' className={scrollProgress !==  0 ? "circleTransition" : ""} ref={circleRef} width={circleSize} height={circleSize} viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" >
         <circle r="90" cx="100" cy="100" fill="transparent" stroke="#e0e2db" strokeWidth="16px" strokeDasharray="565.48px" strokeDashoffset="0"></circle>
         <circle r="90" cx="100" cy="100" stroke="#6622cc" strokeWidth="16px" strokeLinecap="round" strokeDashoffset={`${scrollProgress}px`} fill="transparent" strokeDasharray="565.48px"></circle>
       </svg>
+      <div id="cursor" ref={cursorRef}></div>
 
       <Home pagesRef={pagesRef} />
       { show_project &&

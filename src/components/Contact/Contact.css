@@ -91,7 +91,7 @@
 #emailBtn:hover {
     background-color: var(--secondary-background-color);
     border: 1px var(--main-background-color) solid;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition-duration: .5s;
 }
 

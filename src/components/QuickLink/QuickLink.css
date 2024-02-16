@@ -16,7 +16,7 @@
     padding: .5vh 5vw;
     padding: 0;
     align-items: center;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 #portfolio_header-quicklink_box:hover {

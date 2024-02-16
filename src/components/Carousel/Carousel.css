@@ -48,13 +48,11 @@
 .carousel-left-arrow:hover {
     transition: 0.3s;
     background: linear-gradient(90deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .6), rgba(0, 0, 0, .4), rgba(0, 0, 0, .01));
-    cursor: pointer;
 }
 
 .carousel-right-arrow:hover {
     transition: 0.3s;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .4), rgba(0, 0, 0, .6), rgba(0, 0, 0, .9));
-    cursor: pointer;
 }
 
 .carousel-left-arrow {

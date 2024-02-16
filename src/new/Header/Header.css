@@ -76,9 +76,9 @@
     box-shadow: 0px 0px 25px var(--secondary-color);
 }
 
-#header-action:hover {
+/* #header-action:hover {
     cursor: pointer;
-}
+} */
 
 #header-action-icon {
     position: relative;

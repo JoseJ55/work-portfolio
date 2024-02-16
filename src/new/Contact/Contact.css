@@ -65,7 +65,7 @@
 }
 
 #contact-button:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
     border: var(--secondary-color) 1px solid;
     box-shadow: 0px 0px 10px var(--secondary-color);
 }
