@@ -10,7 +10,7 @@
     height: 90%;
     display: flex;
     overflow: auto;
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 

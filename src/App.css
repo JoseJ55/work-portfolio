@@ -38,7 +38,6 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
-  cursor: none;
   overflow: hidden;
 }
 
@@ -71,7 +70,10 @@ body {
   background-color: var(--cursor-color);
   pointer-events: none;
   transform: translate(-50%, -50%);
-  /* transition: width height background-color 0.3s ease-in-out; */
+}
+
+#process-circle {
+  transition: stroke-dashoffset  0.3s ease-out;
 }
 
 ::-webkit-scrollbar {

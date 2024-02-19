@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { set_progress, updated_progress } from './Redux/Slices/Cursor';
 
 import Home from './pages/Home';
 import ProjectPage from './pages/ProjectPage/ProjectPage';
 
 function App() {
   const { show_project } = useSelector((state) => state.projects);
+  const { cursorProgress, needUpdateProgress } = useSelector((state) => state.cursor); // 565px is the max
 
   const circleRef = useRef();
   const appRef = useRef();
@@ -16,8 +18,23 @@ function App() {
 
   const circleSize = 50;
 
-  const [scrollProgress, setScrollProgress] = useState(565); // 565px is the max
+  const dispatch = useDispatch();
 
+  // With this useEffect is checks if it needs to update the scroll position
+  useEffect(() => {
+    if (needUpdateProgress) {
+      requestAnimationFrame(() => {
+        const scrollableWidth = pagesRef.current.scrollWidth - pagesRef.current.clientWidth;
+        const scrolledPercentage = (pagesRef.current.scrollLeft / scrollableWidth) *  100;
+        const position = (scrolledPercentage /  100) *  565;
+
+        dispatch(set_progress(position -  565));
+        dispatch(updated_progress());
+      });
+    }
+  }, [dispatch, needUpdateProgress])
+
+  // This checks where the mouse moves and move the cursor and scroll circle
   useEffect(() => {
     const handleMouseMove = (e) => {
       // Check if the mouse is within the window bounds
@@ -44,6 +61,7 @@ function App() {
     }
   }, [circleSize]);
 
+  // This useEffect handles scroll on mouse wheel and drag effect
   useEffect(() => {
     let isDown = false;
     let startX;
@@ -62,11 +80,13 @@ function App() {
         duration: 500
       });
 
-      const scrollableWidth = pagesRef.current.scrollWidth - pagesRef.current.clientWidth;
-      const scrolledPercentage = (pagesRef.current.scrollLeft / scrollableWidth) * 100;
-      const position = (scrolledPercentage / 100) * 565;
-
-      setScrollProgress(position - 565)
+      requestAnimationFrame(() => {
+        const scrollableWidth = pagesRef.current.scrollWidth - pagesRef.current.clientWidth;
+        const scrolledPercentage = (pagesRef.current.scrollLeft / scrollableWidth) * 100;
+        const position = (scrolledPercentage / 100) * 565;
+  
+        dispatch(set_progress(position - 565));
+      })
     };
 
     const startDragging = (e) => {
@@ -95,7 +115,7 @@ function App() {
         const scrolledPercentage = (pagesRef.current.scrollLeft / scrollableWidth) * 100;
         const position = (scrolledPercentage / 100) * 565;
   
-        setScrollProgress(position - 565)
+        dispatch(set_progress(position - 565));
       });
     };
 
@@ -112,18 +132,18 @@ function App() {
       pagesRef.current.removeEventListener('mouseleave', stopDragging);
       window.removeEventListener("wheel", handleScroll)
     }
-  }, [show_project])
+  }, [dispatch, show_project])
 
   return (
     <div className="App" ref={appRef} >
 
-      <svg id='circle' className={scrollProgress !==  0 ? "circleTransition" : ""} ref={circleRef} width={circleSize} height={circleSize} viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+      <svg id='circle' className={cursorProgress !==  0 ? "circleTransition" : ""} ref={circleRef} width={circleSize} height={circleSize} viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" >
         <circle r="90" cx="100" cy="100" fill="transparent" stroke="#e0e2db" strokeWidth="16px" strokeDasharray="565.48px" strokeDashoffset="0"></circle>
-        <circle r="90" cx="100" cy="100" stroke="#6622cc" strokeWidth="16px" strokeLinecap="round" strokeDashoffset={`${scrollProgress}px`} fill="transparent" strokeDasharray="565.48px"></circle>
+        <circle id="process-circle" r="90" cx="100" cy="100" stroke="#6622cc" strokeWidth="16px" strokeLinecap="round" strokeDashoffset={`${cursorProgress}px`} fill="transparent" strokeDasharray="565.48px"></circle>
       </svg>
       <div id="cursor" ref={cursorRef}></div>
 
-      <Home pagesRef={pagesRef} />
+      <Home id='homePage' pagesRef={pagesRef} />
       { show_project &&
         <ProjectPage />}
     </div>
