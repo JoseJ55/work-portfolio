@@ -11,14 +11,14 @@
 }
 
 .header-back-icon {
-    background-color: var(--secondary-color);
+    background-color: var(--background-circle-color);
     border-radius: 50%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
-    box-shadow: 0px 0px 20px 20px var(--secondary-color);
+    box-shadow: 0px 0px 30px 40px var(--background-circle-color);
 }
 
 #header-back-first {
@@ -27,7 +27,7 @@
     position: absolute;
     top: 15%;
     left: 25%;
-    /* animation: floatAbout1 6s infinite; */
+    opacity: 0.4;
 }
 
 #header-back-second {
@@ -36,44 +36,51 @@
     position: absolute;
     top: 80%;
     left: 20%;
-    /* animation: floatAbout2 6s infinite; */
+    opacity: 0.6;
 }
 
 #header-back-third {
-    width: 60px;
-    height: 60px;
+    width: 160px;
+    height: 160px;
     position: absolute;
-    top: 17%;
-    left: 75%;
-    /* animation: floatAbout3 6s infinite; */
+    top: calc(25vh);
+    left: 65%;
+    box-shadow: 0px 0px 120px 120px var(--background-circle-color);
+    opacity: 0.9;
 }
 
 #header-text {
     align-items: start;
     z-index: 2;
+    position: absolute;
+    left: 10%;
+    top: calc(20vh);
 }
 
 #header p {
     color: var(--text-color);
-    font-size: 90px;
+    font-size: 120px; 
     font-family: var(--font-text);
     text-shadow: 4px 2px var(--third-color);
 }
 
 .colorChange {
     color: var(--secondary-color);
+    font-size: 120px;
+    text-shadow: 4px 2px var(--third-color);
 }
 
 #header-action {
     position: absolute;
     right: 10%;
-    top: 50%;
-    width: 50px;
-    height: 50px;
+    bottom: 10%;
+    width: 60px;
+    height: 60px;
     background-color: var(--secondary-color);
     border-radius: 50%;
     z-index: 2;
-    box-shadow: 0px 0px 25px var(--secondary-color);
+    box-shadow: 0px 0px 15px var(--secondary-color);
+    transform: translate(-50%, -50%);
 }
 
 /* #header-action:hover {
@@ -107,6 +114,52 @@
 
 #header-action:hover #icon-forward{
     animation: iconForward 2s infinite;
+}
+
+.rounded-text {
+    position: absolute;
+    right: calc(10% + 10px);
+    bottom: calc(10% + 10px);
+    width: 70px;
+    height: 70px;
+    text-transform: uppercase;
+    transform: rotate(-103deg);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    z-index: -1;
+    font-family: var(--font-text);
+    background-color: red;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+}
+.rotating {
+    animation: rotating 12s linear infinite;
+}
+@keyframes coloring {
+    0% {
+      fill: #fff;
+    }
+    35% {
+      fill: #ffda2a;
+    }
+    75% {
+      fill: #00d3b9;
+    }
+    100% {
+      fill: #fff;
+    }
+}
+.coloring {
+    animation: coloring 12s linear infinite;
 }
 
 @media screen and (max-width: 500px) {

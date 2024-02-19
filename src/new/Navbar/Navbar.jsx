@@ -40,7 +40,7 @@ function Navbar() {
 
             setTimeout(() => {
                 dispatch(update_progress());
-              },  500);
+            },  500);
         }
     };
 

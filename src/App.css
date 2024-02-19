@@ -31,6 +31,9 @@
   /* Cursor Size */
   --cursor-size: 10px;
   --cursor-color: var(--secondary-color);
+
+  /* Background Circle Colors */
+  --background-circle-color: rgba(102, 34, 204, 0.5); /* #6622cc */
 }
 
 body {
