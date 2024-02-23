@@ -75,7 +75,7 @@ function App() {
       if (window.innerWidth < 500) return;
   
       pagesRef.current.scrollTo({
-        left: pagesRef.current.scrollLeft + (e.deltaY * 1.5),
+        left: pagesRef.current.scrollLeft + (e.deltaY * 4),
         behavior: 'smooth',
         duration: 500
       });

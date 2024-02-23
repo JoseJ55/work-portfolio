@@ -97,6 +97,9 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  #pages {
+    overflow: hidden;
+  }
   ::-webkit-scrollbar {
     width: 5px;
     height: 15px;

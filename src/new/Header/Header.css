@@ -116,23 +116,6 @@
     animation: iconForward 2s infinite;
 }
 
-.rounded-text {
-    position: absolute;
-    right: calc(10% + 10px);
-    bottom: calc(10% + 10px);
-    width: 70px;
-    height: 70px;
-    text-transform: uppercase;
-    transform: rotate(-103deg);
-    color: #fff;
-    font-weight: bold;
-    font-size: 1rem;
-    z-index: -1;
-    font-family: var(--font-text);
-    background-color: red;
-    transform: translate(-50%, -50%);
-}
-
 @keyframes rotating {
     from {
       transform: rotate(360deg);
@@ -163,6 +146,9 @@
 }
 
 @media screen and (max-width: 500px) {
+    #header {
+        overflow-x: hidden;
+    }
     #header-back-first {
         width: 45px;
         height: 45px;
@@ -176,13 +162,16 @@
         left: 18%;
     }
     #header-back-third {
-        width: 55px;
-        height: 55px;
-        top: 17%;
+        width: 45px;
+        height: 45px;
+        top: calc(35vh);
         right: 20%;
     }
+    #header-text {
+        top: calc(40vh);
+    }
     #header p {
-        font-size: 70px;
+        font-size: 60px;
         text-shadow: 3px 2px var(--third-color);
     }
     #header-action {
@@ -192,12 +181,15 @@
         width: 40px;
         height: 40px;
     }
+    .colorChange {
+        font-size: 60px;
+    }
     .header-action-icon {
         font-size: 18px;
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 600px) {
+@media screen and (min-width: 501px) and (max-width: 600px) {
     #header-back-first {
         width: 40px;
         height: 40px;
@@ -213,12 +205,69 @@
     #header-back-third {
         width: 55px;
         height: 55px;
-        top: 15%;
+        top: calc(35vh);
         right: 18%;
     }
+    #header-text {
+        top: calc(30vh);
+    }
     #header p {
-        font-size: 68px;
+        font-size: 60px;
         text-shadow: 3px 2px var(--third-color);
+    }
+    .colorChange {
+        font-size: 60px;
+    }
+    #header-action {
+        width: 50px;
+        height: 50px;
+    }
+    .header-action-icon {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+    #header-back-third {
+        width: 150px;
+        height: 150px;
+        top: calc(35vh);
+    }
+    #header p {
+        font-size: 90px; 
+    }
+    .colorChange {
+        font-size: 90px;
+    }
+}
+@media screen and (min-width: 1001px) and (max-width: 1400px) {
+    #header-text {
+        width: 80%;
+    }
+    #header p {
+        font-size: 90px; 
+    }
+    
+    .colorChange {
+        font-size: 90px;
+    }
+}
+@media screen and (min-width: 1401px) and (max-width: 2000px) {
+    #header p {
+        font-size: 100px; 
+    }
+    
+    .colorChange {
+        font-size: 100px;
+    }
+    #header-text {
+        top: calc(25vh);
+    }
+}
+
+@media screen and (min-width: 2001px) {
+    #header-text {
+        top: calc(30vh);
+        left: 15%;
     }
 }
 
