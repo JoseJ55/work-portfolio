@@ -8,7 +8,121 @@
     margin-right: 20%;
 }
 
-#project-title {
+/* --------------------------------------------------------------------------------- */
+
+
+/* .project-image {
+    background-color: red;
+    width: 20vw;
+    height: 100vh;
+    position: sticky;
+    left: 0;
+}
+
+.project-info {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.project-head {
+    background-color: green;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 50%;
+    width: 28%;
+    padding: 5% 2%;
+}
+
+.project-title {
+    width: 100%;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 80px;
+    text-wrap: wrap;
+    word-wrap: wrap;
+    -ms-word-wrap: break-word;
+    font-family: var(--font-text);
+    margin-bottom: 7%;
+}
+
+.project-links {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.project-link {
+    padding: 5% 10%;
+    margin-bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.project-link p {
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.project-text {
+    width: 40%;
+    height: 40.5%;
+    background-color: aqua;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 8% 5%;
+}
+
+.project-desc {
+    background-color: blueviolet;
+    width: 90%;
+    margin-bottom: 10%;
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.project-text-sub {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text-section {
+    width: 45%;
+    background-color: red;
+}
+
+.text-section p {
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.text-sub-title {
+    margin-bottom: 6%;
+    font-size: 1.2rem !important;
+    font-weight: bold;
+} */
+
+/* ----------------------------------------------------------------------------------- */
+
+/* #project-title {
     width: 25%;
     height: 100%;
     position: relative;
@@ -231,4 +345,4 @@
         min-width: 500px;
         max-width: 500px;
     }
-}
+} */

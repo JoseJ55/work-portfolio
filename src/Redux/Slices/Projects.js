@@ -18,6 +18,8 @@ const initialState = {
         pcImage: '/images/fitnessGym/fitness101-whole.jpg',
         mobileImage: '/images/fitnessGym/fitness101-mobile.jpg',
         images: ["/images/fitnessGym/fitness101Main.png", "/images/fitnessGym/fitness101main2.png", "/images/fitnessGym/fitness101main3.png", "/images/fitnessGym/fitness101main4.png", "/images/fitnessGym/fitness101main5.png"],
+        design: 'Using Figma to help design and test the UI on how it will look. The basic website pages where also deign this way event he routes. The design is a simple style with not a lot of moving parts so user experience in not impeded.',
+        website: 'With tools like Heroku and firebase to host and manage future data, the website is able to run smoothly and have unique interactions. Also using the Handlebars engine to render server side the website will stay up to date and can be easily updated.'
     },
     {
         id: 2,
