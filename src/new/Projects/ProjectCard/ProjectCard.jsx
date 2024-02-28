@@ -1,14 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './ProjectCard.css';
 
 import { AiFillGithub } from "react-icons/ai";
 import { CgWebsite } from 'react-icons/cg';
 
 function ProjectCard({ project }) {
-    const [stuck, setStuck] = useState(false);
-
-    const stickyRef = useRef(null);
     const containerRef = useRef(null);
+    const backgroundRef = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -16,18 +14,16 @@ function ProjectCard({ project }) {
                 const scrollPercentage = entry.intersectionRatio;
                 const left = entry.boundingClientRect.left;
 
-                if (scrollPercentage && left > 0) {
-                    const horizontalMovement = 20; 
-                    // const newBackgroundPosition = `${Math.max(0, Math.min(horizontalMovement, scrollPercentage * horizontalMovement))}% center`;
-                    // stickyRef.current.style.backgroundPosition = newBackgroundPosition;
-                    const newTransform = `translateX(${-10 - Math.max(0, Math.min(horizontalMovement, scrollPercentage * horizontalMovement))}%)`;
-                    document.querySelector('.background').style.transform = newTransform;
-                }
-
-                if (left < 0) {
-                    document.querySelector('.background').style.opacity = 0.6;
-                } else {
-                    document.querySelector('.background').style.opacity = 1;
+                if (backgroundRef.current) {
+                    if (scrollPercentage && left > 0) {
+                        const horizontalMovement = 20; 
+                        // const newBackgroundPosition = `${Math.max(0, Math.min(horizontalMovement, scrollPercentage * horizontalMovement))}% center`;
+                        // stickyRef.current.style.backgroundPosition = newBackgroundPosition;
+                        const newTransform = `translateX(${-10 - Math.max(0, Math.min(horizontalMovement, scrollPercentage * horizontalMovement))}%)`;
+                        backgroundRef.current.style.transform = newTransform;
+                    }
+    
+                    backgroundRef.current.style.opacity = left < 0 ? 0.6 : 1;
                 }
             },
             {
@@ -54,7 +50,7 @@ function ProjectCard({ project }) {
                 style={{ backgroundImage: `url(${project.images[0]})`, zIndex: project.id + 100}}>
             </div> */}
             <div class="project-image">
-                <div class="background" style={{ backgroundImage: `url(${project.images[0]})`, zIndex: project.id + 100}}></div>
+                <div class="background" ref={backgroundRef} style={{ backgroundImage: `url(${project.images[0]})`, zIndex: project.id + 100}}></div>
             </div>
 
             <div className='project-info' style={{ zIndex: project.id + 101}}>
@@ -89,14 +85,14 @@ function ProjectCard({ project }) {
                     <p className='project-desc'>{project.description}</p>
                     
                     <div className='project-text-sub'>
-                        <div className='text-section'>
+                        {project?.design && <div className='text-section'>
                             <p className='text-sub-title'>Design</p>
                             <p>{project?.design}</p>
-                        </div>
-                        <div className='text-section'>
+                        </div>}
+                        {project?.website && <div className='text-section'>
                             <p className='text-sub-title'>Website</p>
                             <p>{project?.website}</p>
-                        </div>
+                        </div>}
                     </div>
                 </div>
             </div>

@@ -160,7 +160,7 @@
 
 .project-desc {
     width: 90%;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
     font-family: var(--font-text);
     color: var(--text-color);
     font-size: 1.1rem;
@@ -185,7 +185,8 @@
 }
 
 .text-sub-title {
-    margin-bottom: 6%;
-    font-size: 1.2rem !important;
+    margin-bottom: 5%;
+    font-size: 1.4rem !important;
     font-weight: bold;
+    color: var(--third-color) !important;
 }
