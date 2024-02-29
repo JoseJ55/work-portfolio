@@ -13,6 +13,8 @@ function Projects() {
     <div id='projects'>
       <ProjectCard project={all[0]} />
       <ProjectCard project={all[1]} />
+      <ProjectCard project={all[2]} />
+      <ProjectCard project={all[3]} />
     </div>
   )
 }
