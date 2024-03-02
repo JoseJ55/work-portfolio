@@ -1,10 +1,10 @@
 #about {
-    width: 200%;
+    width: 100vw;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 20%;
+    padding: 0 30%;
 }
 
 #about-profile {

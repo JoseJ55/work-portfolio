@@ -31,7 +31,7 @@
     font-family: var(--font-text);
     font-size: 1.2rem;
     color: var(--text-color);
-    z-index: 3;
+    z-index: 1003;
 }
 
 /* .navbar-link:hover {
@@ -51,7 +51,7 @@
     background-color: var(--secondary-color);
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 1002;
     border-radius: 0 0 15px 15px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -104,7 +104,7 @@
         display: flex;
         height: fit-content;
         flex-direction: column;
-        z-index: 20;
+        z-index: 1020;
         position: fixed;
         top: 0%;
         left: 0%;
@@ -140,7 +140,7 @@
     }
     #navbar-open-items {
         min-height: 100%;
-        z-index: 20;
+        z-index: 1020;
     }
     .navbar-open-item {
         margin: 6% 0;
