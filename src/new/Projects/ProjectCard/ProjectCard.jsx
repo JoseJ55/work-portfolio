@@ -31,8 +31,33 @@ function ProjectCard({ project }) {
             }
         );
 
-        if (containerRef.current) {
+        const mobileObserver = new IntersectionObserver(
+            ([entry]) => {
+                const scrollPercentage = entry.intersectionRatio;
+                const top = entry.boundingClientRect.top;
+
+                if (backgroundRef.current) {
+                    if (scrollPercentage && top > 0) {
+                        const verticalMovement = 20; 
+                        
+                        const newTransform = `translateY(${-10 - Math.max(0, Math.min(verticalMovement, scrollPercentage * verticalMovement))}%)`;
+                        backgroundRef.current.style.transform = newTransform;
+                    }
+    
+                    backgroundRef.current.style.opacity = top < 0 ? 0.6 : 1;
+                }
+            },
+            {
+                threshold: Array.from({ length: 11 }, (_, i) => i * 0.1)
+            }
+        );
+
+        if (containerRef.current && window.innerWidth > 500) {
             observer.observe(containerRef.current);
+        }
+
+        if (containerRef.current && window.innerWidth <= 500) {
+            mobileObserver.observe(containerRef.current);
         }
 
         return () => {

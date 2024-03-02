@@ -47,6 +47,7 @@
     left: 65%;
     box-shadow: 0px 0px 120px 120px var(--background-circle-color);
     opacity: 0.9;
+    z-index: 0;
 }
 
 #header-text {
