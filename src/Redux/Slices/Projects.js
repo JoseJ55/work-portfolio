@@ -12,14 +12,14 @@ const initialState = {
             github: "https://github.com/JoseJ55/fitness-gym",
             live: "https://fitness101-28.herokuapp.com/"
         },
-        description: "This small website employs Express.js in conjunction with the Handlebars engine. Primarily, it serves as a platform for honing design skills and implementing subtle animations. The use of Express streamlines page routing and enhances user accessibility. Handlebars plays a pivotal role by expediting website rendering and preserving animation and design quality across various screen dimensions. The website is fully responsive, accommodating screens ranging from 4K displays to compact mobile phones. While some animations may require refinement for specific screen sizes, these improvements are slated for future updates. Furthermore, plans are in motion to revamp the shop and trainers' pages, with additional considerations for redesigning specific sections of the website.",
+        description: "Powered by Express.js and the Handlebars engine, this sleek website is a testament to refined design and subtle animations. Express.js seamlessly handles page routing, ensuring smooth user navigation, while Handlebars accelerates website rendering, maintaining design integrity across diverse screen sizes. Fully responsive, it adapts effortlessly from expansive 4K displays to the compact screens of mobile devices. \n Although some animations may undergo fine-tuning for optimal performance on certain screen dimensions, rest assured, these enhancements are already on the horizon. Exciting plans are underway for a revitalized shopping experience and revamped trainer pages, alongside meticulous redesigns of select sections throughout the site.",
         tools: ["Express.js", "Node.js", "HTML", "CSS", "Javascript"],
         coverImage: '/images/fitnessGym/fitness101-all-devices.png',
         pcImage: '/images/fitnessGym/fitness101-whole.jpg',
         mobileImage: '/images/fitnessGym/fitness101-mobile.jpg',
         images: ["/images/fitnessGym/fitness101Main.png", "/images/fitnessGym/fitness101main2.png", "/images/fitnessGym/fitness101main3.png", "/images/fitnessGym/fitness101main4.png", "/images/fitnessGym/fitness101main5.png"],
-        design: 'Using Figma to help design and test the UI on how it will look. The basic website pages where also deign this way event he routes. The design is a simple style with not a lot of moving parts so user experience in not impeded.',
-        website: 'With tools like Heroku and firebase to host and manage future data, the website is able to run smoothly and have unique interactions. Also using the Handlebars engine to render server side the website will stay up to date and can be easily updated.'
+        design: 'Designed and tested using Figma, this website boasts a streamlined UI with straightforward routes. Its minimalist design prioritizes user experience without sacrificing style, ensuring seamless navigation and interaction.',
+        website: 'Employing Heroku and Firebase for hosting and data management, this website delivers seamless performance and offers distinctive interactions. Leveraging the Handlebars engine for server-side rendering ensures the site remains current and facilitates effortless updates.'
     },
     {
         id: 2,
@@ -28,12 +28,14 @@ const initialState = {
             github: "https://github.com/JoseJ55/solar-showcase",
             live: 'https://solarsystem-9ca07.web.app/',
         },
-        description: "Explore the cosmos like never before with our captivating React-based website, enriched with JavaScript and Three.js. Immerse yourself in a celestial journey as you delve into the mysteries of our local solar system. While our pages offer a traditional web layout for easy navigation, you'll encounter occasional 3D models that vividly bring astronomical wonders to life. Our site boasts seamless animations that gracefully enhance the user experience, ensuring that learning about our celestial neighbors is not only informative but visually captivating.",
+        description: "Embark on an unparalleled cosmic adventure through our mesmerizing React-powered website, enhanced with JavaScript and Three.js. Explore the depths of our solar system's mysteries with immersive 3D models, seamlessly integrated into our traditional web layout for effortless navigation. Engage with stunning animations that elevate your journey, making learning about the cosmos both informative and visually captivating.",
         tools: ["HTML", "CSS", "Javascript", "React.js", "React Hooks", "Three.js"],
         coverImage: '/images/solarShowcase/solar-system-all-devices.png',
         pcImage: '/images/solarShowcase/Solar-system-whole.jpg',
         mobileImage: '/images/solarShowcase/Solar-system-whole-mobile.jpg',
         images: ["/images/solarShowcase/solar1.png"],
+        design: 'Crafted with Three.js at its core, our design philosophy revolves around integrating simple models within a dynamic 3D environment, offering diverse spaces to showcase captivating visuals.',
+        website: 'Utilizing React.js, we seamlessly construct components and strategically position diverse UI elements with precision. Our site is powered by Firebase Hosting, ensuring swift and dependable management for an optimal user experience.'
     },
     {
         id: 3,
@@ -42,12 +44,14 @@ const initialState = {
             github: "https://github.com/JoseJ55/car-showcase",
             live: 'https://car-showcase-7cba7.web.app/'
         },
-        description: "A car showcase website with a dynamic fusion of React, JavaScript, and Three.js, delivering an immersive experience for automotive enthusiasts. Through the power of Three.js, we render stunning 3D models of various car types, allowing you to explore them from every angle. Our intuitive React-based UI ensures effortless navigation and customization, enabling you to tailor each car to your preferences. Whether you're an admirer of sleek sports cars or rugged off-roaders, our platform offers a captivating and interactive way to appreciate and personalize these vehicles.",
+        description: "Experience the ultimate car showcase website, combining React, JavaScript, and Three.js for an immersive journey into the world of automobiles. With Three.js, explore stunning 3D models of diverse car types from every angle. Our intuitive React-based UI guarantees seamless navigation and customization, empowering you to personalize each car to your liking. Whether you're a fan of sleek sports cars or rugged off-roaders, our platform provides a captivating and interactive way to admire and customize these vehicles.",
         tools: ["React.js", "React-routes", "React-Hooks", "HTML", "CSS", "Javascript", "Three.js"],
         coverImage: '/images/carShowcase/car-showcase-all-devices.png',
         pcImage: '/images/carShowcase/car-showcase-1.png',
         mobileImage: null,
         images: ["/images/carShowcase/car-showcase-1.png"],
+        design: 'Crafted with Three.js, our design offers versatile tools to manipulate the 3D space seamlessly through a user-friendly interface.',
+        website: 'We rely on Firebase Hosting for efficient website management. Our site is powered by the Three.js engine, ensuring optimized code for swift interactions and seamless updates to the 3D environment.'
     },
     {
         id: 4,
@@ -56,12 +60,14 @@ const initialState = {
             github: "https://github.com/JoseJ55/online-bar",
             live: "https://online-bar-dc789.web.app/"
         },
-        description: "Welcome to our online bar, where an extensive range of drinks awaits, from the classics to the most exotic concoctions. With our user-friendly layout, anyone can effortlessly explore a diverse array of beverages, complete with detailed information. Whether you're in search of a specific drink by name or want to discover drinks based on available ingredients, our platform caters to your preferences. No matter what you seek, you're bound to stumble upon a delightful new libation to savor. Upon conducting a search, users are presented with comprehensive drink profiles, featuring ingredient lists, quantities, and step-by-step preparation instructions. This empowers those interested in crafting these libations at home. Our website seamlessly interfaces with various APIs, all drawing from a unified database, ensuring consistent information and a hassle-free experience for our users.",
+        description: "Welcome to Thirsty, your go-to online destination for our bar's offerings. Our minimalistic website provides easy access to all resources, including our menu and information on our online ordering app for convenient and quick orders.",
         tools: ["HTML", "CSS", "Javascript", "React.js", "React Hooks", "cocktaildb API"],
         coverImage: '/images/onlineBar/online-bar-all-devices.png',
         pcImage: '/images/onlineBar/Online-bar-whole.jpg',
         mobileImage: null,
         images: ["/images/onlineBar/onlineBarMain.png", "/images/onlineBar/onlineBar.png", "/images/onlineBar/onlineBarIngSearch.png", "/images/onlineBar/onlineBarDrinkSearch.png"],
+        design: 'Crafted with Figma, our website features clean and straightforward pages. We\'ve meticulously designed web routes and backend access paths for seamless transitions and quick navigation.',
+        website: 'We\'ve harnessed the power of React to construct and manage various components, creating a sleek and minimalistic website. Hosting is handled seamlessly through Firebase, ensuring reliability and efficiency. Additionally, we\'ve integrated the CocktailDB API to provide users with comprehensive information about the drinks they\'re exploring.'
     },
     {
         id: 5,
