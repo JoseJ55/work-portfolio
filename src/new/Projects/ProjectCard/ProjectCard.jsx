@@ -83,7 +83,7 @@ function ProjectCard({ project }) {
                     <p className='project-title'>{project.title}</p>
                     
                     <div className='project-links'>
-                        <a 
+                        {project?.links?.github && <a 
                             className='project-link'
                             target="_blank"
                             rel='noopener noreferrer'
@@ -92,8 +92,8 @@ function ProjectCard({ project }) {
                             <p className='link-title'>Github</p>
                             <AiFillGithub className="project-icon"/>
                             <div className='link-shape'></div>
-                        </a>
-                        <a 
+                        </a>}
+                        {project?.links?.live && <a 
                             className='project-link'
                             target="_blank"
                             rel='noopener noreferrer'
@@ -102,7 +102,7 @@ function ProjectCard({ project }) {
                             <p className='link-title'>Live</p>
                             <CgWebsite className="project-icon"/>
                             <div className='link-shape'></div>
-                        </a>
+                        </a>}
                     </div>
                 </div>
 
@@ -115,7 +115,7 @@ function ProjectCard({ project }) {
                             <p>{project?.design}</p>
                         </div>}
                         {project?.website && <div className='text-section'>
-                            <p className='text-sub-title'>Website</p>
+                            <p className='text-sub-title'>Tech</p>
                             <p>{project?.website}</p>
                         </div>}
                     </div>
