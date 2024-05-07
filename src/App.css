@@ -97,6 +97,12 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  #circle {
+    display: none;
+  }
+  #cursor {
+    display: none;
+  }
   #pages {
     overflow: hidden;
   }

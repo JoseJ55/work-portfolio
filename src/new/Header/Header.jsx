@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Header.css';
 import { MdArrowForwardIos } from 'react-icons/md';
 
@@ -34,30 +34,36 @@ function Header() {
     return { percentageX, percentageY };
   };
 
-  const handleMouseMove = (e) => {
-    x = e.offsetX;
-    y = e.offsetY;
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      x = e.offsetX;
+      y = e.offsetY;
+  
+      var first = document.getElementById('header-back-first');
+      var second = document.getElementById('header-back-second');
+      var third = document.getElementById('header-back-third');
+  
+      var rect1 = first.getBoundingClientRect();
+      var rect2 = second.getBoundingClientRect();
+      var rect3 = third.getBoundingClientRect();
+  
+      const translation1 = calculateTranslation(rect1, x, y, 0.15, 10);
+      const translation2 = calculateTranslation(rect2, x, y, 0.2, 15);
+      const translation3 = calculateTranslation(rect3, x, y, 0.30, 80);
+  
+      requestAnimationFrame(() => { 
+        first.style.transform = `translate(${translation1.percentageX}%, ${translation1.percentageY}%)`;
+        second.style.transform = `translate(${translation2.percentageX}%, ${translation2.percentageY}%)`;
+        third.style.transform = `translate(${translation3.percentageX}%, ${translation3.percentageY}%)`;
+      });
+    }
+  
+    window.addEventListener('mousemove', handleMouseMove);
 
-    var first = document.getElementById('header-back-first');
-    var second = document.getElementById('header-back-second');
-    var third = document.getElementById('header-back-third');
-
-    var rect1 = first.getBoundingClientRect();
-    var rect2 = second.getBoundingClientRect();
-    var rect3 = third.getBoundingClientRect();
-
-    const translation1 = calculateTranslation(rect1, x, y, 0.15, 10);
-    const translation2 = calculateTranslation(rect2, x, y, 0.2, 15);
-    const translation3 = calculateTranslation(rect3, x, y, 0.30, 80);
-
-    requestAnimationFrame(() => { 
-      first.style.transform = `translate(${translation1.percentageX}%, ${translation1.percentageY}%)`;
-      second.style.transform = `translate(${translation2.percentageX}%, ${translation2.percentageY}%)`;
-      third.style.transform = `translate(${translation3.percentageX}%, ${translation3.percentageY}%)`;
-    });
-  }
-
-  window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    }
+  }, []);
 
   return (
     <div id='header'>

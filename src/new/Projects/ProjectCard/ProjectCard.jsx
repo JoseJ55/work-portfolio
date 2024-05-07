@@ -17,8 +17,6 @@ function ProjectCard({ project }) {
                 if (backgroundRef.current) {
                     if (scrollPercentage && left > 0) {
                         const horizontalMovement = 20; 
-                        // const newBackgroundPosition = `${Math.max(0, Math.min(horizontalMovement, scrollPercentage * horizontalMovement))}% center`;
-                        // stickyRef.current.style.backgroundPosition = newBackgroundPosition;
                         const newTransform = `translateX(${-10 - Math.max(0, Math.min(horizontalMovement, scrollPercentage * horizontalMovement))}%)`;
                         backgroundRef.current.style.transform = newTransform;
                     }
@@ -69,11 +67,6 @@ function ProjectCard({ project }) {
 
     return (
         <div className='project' ref={containerRef}>
-            {/* <div 
-                className={`project-image ${stuck && 'image-stuck'}`}
-                ref={stickyRef} 
-                style={{ backgroundImage: `url(${project.images[0]})`, zIndex: project.id + 100}}>
-            </div> */}
             <div class="project-image">
                 <div class="background" ref={backgroundRef} style={{ backgroundImage: `url(${project.images[0]})`, zIndex: project.id + 100}}></div>
             </div>
