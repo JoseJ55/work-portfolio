@@ -23,7 +23,7 @@
 .link-icon {
     margin-left: 25px;
     font-family: var(--font-text);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--text-color);
 }
 
@@ -32,6 +32,7 @@
 }
 
 #mobile-navbar-button {
+    display: none;
     z-index: 1021;
     width: 90%;
     min-height: 10%;
@@ -39,6 +40,7 @@
 }
 
 #navbar-open-items {
+    display: none;
     z-index: 1020;
     width: 100%;
     min-height: 90%;
@@ -60,7 +62,7 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     #navbar {
         width: 100%;
         display: flex;
@@ -77,8 +79,12 @@
     #navbar-social {display: none;}
 
     #mobile-navbar-button {
+        display: block;
         width: 90%;
         padding: 5%;
+    }
+    #navbar-open-items {
+        display: block;
     }
     #navbar-close-icon {
         color: var(--text-color);
@@ -90,8 +96,8 @@
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 600px) {
+/* @media screen and (min-width: 500px) and (max-width: 600px) {
     #navbar-links {
         width: 90%;
     }
-}
+} */
